@@ -1,11 +1,26 @@
 import { useEffect } from 'react';
 import './Home.css';
 import profileImage from './images/profile_picture.jpg';
-import {FaLinkedin, FaGithub, FaEnvelope, FaFileDownload, FaServer, FaHome, FaProjectDiagram} from 'react-icons/fa';
+import {FaLinkedin, FaGithub, FaEnvelope, FaServer, FaHome, FaProjectDiagram} from 'react-icons/fa';
 import { SiSpringboot, SiMysql, SiDocker } from 'react-icons/si';
 import {FaAddressBook, FaCode, FaReact, FaUser} from "react-icons/fa6";
 import dashboardImage from './images/Pluto/dashboard.png';
 import {Link} from "react-router-dom";
+import emailjs from '@emailjs/browser';
+
+function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_5x5g596', 'template_tm4bcjr', e.target, '6gAbkHQMLTBgYjurM')
+        .then((result) => {
+            alert('Message sent successfully!');
+            e.target.reset();
+        }, (error) => {
+            alert('Failed to send message. Please try again later.');
+            console.error(error.text);
+        });
+}
+
 
 function Home() {
     useEffect(() => {
@@ -162,15 +177,15 @@ function Home() {
 
             <section id="contact" className="section contact-section">
                 <h2 className="section-title animate-on-load">Get In Touch</h2>
-                <form className="contact-form animate-on-load">
+                <form className="contact-form animate-on-load" onSubmit={sendEmail}>
                     <div className="form-group">
-                        <input type="text" placeholder="Your Name" required />
+                        <input type="text" name="user_name" placeholder="Your Name" required />
                     </div>
                     <div className="form-group">
-                        <input type="email" placeholder="Your Email" required />
+                        <input type="email" name="user_email" placeholder="Your Email" required />
                     </div>
                     <div className="form-group">
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                     </div>
                     <button type="submit" className="btn btn-primary">Send Message</button>
                 </form>
