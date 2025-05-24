@@ -20,13 +20,13 @@ const Pluto = () => {
     };
 
     const images = [
-        { src: dashboard, alt: 'Dashboard', caption: 'Main Dashboard' },
-        { src: calender, alt: 'Calendar', caption: 'Calendar View' },
+        { src: signup, alt: 'Sign Up', caption: 'Registration Page' },
         { src: login, alt: 'Login', caption: 'Login Page' },
-        { src: notes, alt: 'Notes', caption: 'Notes Feature' },
         { src: profile, alt: 'Profile', caption: 'User Profile' },
+        { src: dashboard, alt: 'Dashboard', caption: 'Main Dashboard' },
         { src: schema, alt: 'Schema', caption: 'Database Schema' },
-        { src: signup, alt: 'Sign Up', caption: 'Registration Page' }
+        { src: notes, alt: 'Notes', caption: 'Notes Feature' },
+        { src: calender, alt: 'Calendar', caption: 'Calendar View' },
     ];
 
     return (
@@ -55,18 +55,19 @@ const Pluto = () => {
                 {images.map((image, index) => (
                     <div key={index} className="gallery-item">
                         <div className="image-container">
-                            <img
-                                src={image.src}
-                                alt={image.alt}
-                                className="gallery-image"
-                            />
-                            <div className="image-overlay">
-                                <p className="image-caption">{image.caption}</p>
-                            </div>
+                            <img src={image.src} alt={image.alt} className="gallery-image" />
+                        </div>
+                        <div className="image-text">
+                            <h3>{image.caption}</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
                         </div>
                     </div>
                 ))}
             </div>
+
         </div>
     );
 };
