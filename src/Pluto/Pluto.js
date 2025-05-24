@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {FaGithub, FaHome} from 'react-icons/fa';
 import './Pluto.css';
 
@@ -14,6 +14,10 @@ import {useNavigate} from "react-router-dom";
 const Pluto = () => {
     const navigate = useNavigate();
     const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const handleBackClick = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
