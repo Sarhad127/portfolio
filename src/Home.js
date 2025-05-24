@@ -83,7 +83,7 @@ function Home() {
 
                     <div className="hero-text">
                         <h1 className="greeting">Hello, I'm <span className="highlight">Sarhad Bahrami</span></h1>
-                        <h2 className="title">a newly graduated Java Backend Developer from Nackademin.</h2>
+                        <h2 className="title">A newly graduated Java Backend Developer from Nackademin.</h2>
                         <p className="summary">
                             I build robust, scalable backend systems with Java and Spring ecosystem.
                             Passionate about clean code, system architecture, and solving complex problems.

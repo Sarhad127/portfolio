@@ -103,6 +103,7 @@ body {
 }
 
 .summary {
+    font-family: Cambria, sans-serif;
     font-size: 1.1rem;
     margin-bottom: 30px;
     color: var(--text-color);
