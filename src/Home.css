@@ -373,7 +373,7 @@ body {
         aspect-ratio: 16/9;
     }
 }
-/* Navigation Bar */
+
 .navbar {
     position: fixed;
     top: 0;
@@ -429,12 +429,10 @@ body {
     font-size: 1.1rem;
 }
 
-/* Add padding to the first section to account for fixed navbar */
 .hero-section {
     padding-top: 80px;
 }
 
-/* Responsive Navbar */
 @media (max-width: 768px) {
     .navbar-container {
         padding: 1rem;
@@ -455,4 +453,47 @@ body {
     .hero-section {
         padding-top: 70px;
     }
+}
+.project-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-placeholder::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    filter: blur(1px);
+    transition: filter 0.3s ease;
+    z-index: 0;
+}
+
+.project-card:hover .project-placeholder {
+    transform: scale(0.95);
+    cursor: pointer;
+}
+
+.project-card:hover .project-placeholder::before {
+    filter: blur(0,5px);
+}
+
+.project-label {
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: Cambria, sans-serif;
+    color: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+    position: relative;
 }

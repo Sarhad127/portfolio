@@ -4,7 +4,7 @@ import profileImage from './images/profile_picture.jpg';
 import {FaLinkedin, FaGithub, FaEnvelope, FaFileDownload, FaServer, FaHome, FaProjectDiagram} from 'react-icons/fa';
 import { SiSpringboot, SiMysql, SiDocker } from 'react-icons/si';
 import {FaAddressBook, FaCode, FaReact, FaUser} from "react-icons/fa6";
-
+import dashboardImage from './images/Pluto/dashboard.png';
 function Home() {
     useEffect(() => {
         const elements = document.querySelectorAll('.animate-on-load');
@@ -97,7 +97,10 @@ function Home() {
                 <h2 className="section-title animate-on-load">My Projects</h2>
                 <div className="projects-grid animate-on-load">
                     <div className="project-card">
-                        <div className="project-placeholder">
+                        <div
+                            className="project-placeholder pluto-project"
+                            style={{ backgroundImage: `url(${dashboardImage})` }}
+                        >
                             <span className="project-label">Pluto</span>
                         </div>
                     </div>
