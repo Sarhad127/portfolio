@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { FaHome } from 'react-icons/fa';
 import './Pluto.css';
 
@@ -13,20 +13,31 @@ import {useNavigate} from "react-router-dom";
 
 const Pluto = () => {
     const navigate = useNavigate();
+    const [selectedImage, setSelectedImage] = useState(null);
 
     const handleBackClick = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
         navigate('/');
     };
 
+    const openModal = (image) => {
+        setSelectedImage(image);
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeModal = () => {
+        setSelectedImage(null);
+        document.body.style.overflow = 'auto';
+    };
+
     const images = [
         { src: signup, alt: 'Sign Up', caption: 'Registration Page' },
         { src: login, alt: 'Login', caption: 'Login Page' },
         { src: profile, alt: 'Profile', caption: 'User Profile' },
-        { src: dashboard, alt: 'Dashboard', caption: 'Main Dashboard' },
-        { src: schema, alt: 'Schema', caption: 'Database Schema' },
+        { src: dashboard, alt: 'Dashboard', caption: 'Boards' },
+        { src: schema, alt: 'Schema', caption: 'Schedule' },
         { src: notes, alt: 'Notes', caption: 'Notes Feature' },
-        { src: calender, alt: 'Calendar', caption: 'Calendar View' },
+        { src: calender, alt: 'Calendar', caption: 'Calendar' },
     ];
 
     return (
@@ -44,7 +55,7 @@ const Pluto = () => {
             </nav>
 
             <section className="project-description">
-                <h2>Pluto - Productivity Application</h2>
+                <h2>Pluto - Task Management Application</h2>
                 <p>
                     Pluto is a comprehensive productivity application featuring dashboard, calendar, notes,
                     and user management systems. Built with React, Spring Boot, and MySQL.
@@ -53,7 +64,7 @@ const Pluto = () => {
 
             <div className="image-gallery">
                 {images.map((image, index) => (
-                    <div key={index} className="gallery-item">
+                    <div key={index} className="gallery-item" onClick={() => openModal(image)}>
                         <div className="image-container">
                             <img src={image.src} alt={image.alt} className="gallery-image" />
                         </div>
@@ -67,7 +78,22 @@ const Pluto = () => {
                     </div>
                 ))}
             </div>
-
+            {selectedImage && (
+                <div className="modal-overlay" onClick={closeModal}>
+                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                        <button className="modal-close" onClick={closeModal}>
+                            &times;
+                        </button>
+                        <div className="modal-image-container">
+                            <img src={selectedImage.src} alt={selectedImage.alt} />
+                        </div>
+                        <div className="modal-text-content">
+                            <h3>{selectedImage.caption}</h3>
+                            <p>{selectedImage.description}</p>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
