@@ -9,10 +9,14 @@ import notes from '../images/Pluto/notes.png';
 import profile from '../images/Pluto/profile.png';
 import schema from '../images/Pluto/schema.png';
 import signup from '../images/Pluto/sign up.png';
+import {useNavigate} from "react-router-dom";
 
 const Pluto = () => {
-    const scrollToTop = () => {
+    const navigate = useNavigate();
+
+    const handleBackClick = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
+        navigate('/');
     };
 
     const images = [
@@ -29,12 +33,13 @@ const Pluto = () => {
         <div className="pluto-container">
 
             <nav className="pluto-navbar">
-                <div className="navbar-content">
-                    <button onClick={scrollToTop} className="nav-button">
+                <div className="navbar-pluto-content">
+                    <div className="navbar-links">
+                    <button onClick={handleBackClick} className="nav-button">
                         <FaHome className="nav-icon" />
                         <span>Back to Home</span>
                     </button>
-                    <h1>Pluto Project Gallery</h1>
+                </div>
                 </div>
             </nav>
 
