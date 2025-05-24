@@ -61,27 +61,19 @@ const Pluto = () => {
             src: schema,
             alt: 'Schema',
             caption: 'Schedule',
-            description: 'Sure! Here’s a shorter version in that style:\n' +
-                '\n' +
-                '---\n' +
-                '\n' +
-                'The SchedulePage displays a clean weekly calendar with customizable hourly slots, making it easy to organize events. Users can add or edit events via a modal, setting titles, times, descriptions, and colors for quick identification. Overlapping events are prevented to keep the schedule clear. The visible hours can be adjusted to fit personal routines and are saved for convenience, providing a simple and flexible way to manage weekly plans.\n'
+            description: 'The SchedulePage displays a clean weekly calendar with customizable hourly slots, making it easy to organize events. Users can add or edit events via a modal, setting titles, times, descriptions, and colors for quick identification. Overlapping events are prevented to keep the schedule clear. The visible hours can be adjusted to fit personal routines and are saved for convenience, providing a simple and flexible way to manage weekly plans.\n'
         },
         {
             src: notes,
             alt: 'Notes',
             caption: 'Notes Feature',
-            description: 'Here’s a concise description of the **NotesPage** in the style you asked:\n' +
-                '\n' +
-                '---\n' +
-                '\n' +
-                'The NotesPage provides a colorful, easy-to-use space for managing notes. Users can add new notes by selecting from a preset color palette, edit note text inline with a simple toggle, and delete notes with confirmation. Notes load from the server on page load and are saved automatically on edit. The interface includes a sidebar for navigation and uses smooth focus management for editing, ensuring a seamless note-taking experience.\n'
+            description: 'The NotesPage provides a colorful, easy-to-use space for managing notes. Users can add new notes by selecting from a preset color palette, edit note text inline with a simple toggle, and delete notes with confirmation. Notes load from the server on page load and are saved automatically on edit. The interface includes a sidebar for navigation and uses smooth focus management for editing, ensuring a seamless note-taking experience.\n'
         },
         {
             src: calender,
             alt: 'Calendar',
             caption: 'Calendar',
-            description: 'The calendar page shows a monthly grid with the current date highlighted Users can navigate between months and click any day to add or edit notes Notes are saved locally and days from other months appear faded The selected day is clearly highlighted and the note input auto-focuses for easy editing The calendar helps users quickly view and manage daily notes in an intuitive layout'
+            description: 'The calendar page shows a monthly grid with the current date highlighted. Users can navigate between months and click any day to add or edit calender day.'
         },
     ];
 
@@ -100,10 +92,9 @@ const Pluto = () => {
             </nav>
 
             <section className="project-description">
-                <h2>Pluto - Task Management Application</h2>
+                <h2>Pluto</h2>
                 <p>
-                    Pluto is a comprehensive productivity application featuring dashboard, calendar, notes,
-                    and user management systems. Built with React, Spring Boot, and MySQL.
+                    Pluto is a comprehensive productivity application featuring boards, schedules, calendars, notes, and user management systems. It is built with React, Spring Boot, and MySQL, and deployed with Docker using CI/CD pipelines.
                 </p>
             </section>
 
