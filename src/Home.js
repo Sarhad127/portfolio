@@ -83,7 +83,7 @@ function Home() {
 
                     <div className="hero-text">
                         <h1 className="greeting">Hello, I'm <span className="highlight">Sarhad Bahrami</span></h1>
-                        <h2 className="title">Java Backend Developer</h2>
+                        <h2 className="title">a newly graduated Java Backend Developer from Nackademin.</h2>
                         <p className="summary">
                             I build robust, scalable backend systems with Java and Spring ecosystem.
                             Passionate about clean code, system architecture, and solving complex problems.
@@ -137,19 +137,13 @@ function Home() {
                 <h2 className="section-title animate-on-load">About Me</h2>
                 <div className="about-content animate-on-load">
                     <p>
-                        I'm a passionate software developer specialized in Java and backend technologies like Spring Boot,
-                        REST APIs, and MySQL. With a strong foundation in computer science principles, I enjoy building
-                        clean, scalable solutions and collaborating in agile teams.
+                        I’m a passionate software developer specializing in Java and backend technologies such as Spring Boot, REST APIs, and MySQL. With a strong foundation in computer science principles, I enjoy building clean, scalable solutions and collaborating effectively within agile teams.
                     </p>
                     <p>
-                        Recently, I've completed my education at Nackademin and worked on exciting projects involving
-                        microservices architecture, machine learning integration, and secure web development using
-                        Spring Security.
+                        Recently, I completed my education at Nackademin, where I worked on exciting projects involving microservices architecture, machine learning integration, and secure web development using Spring Security.
                     </p>
                     <p>
-                        What drives me is the challenge of solving complex problems and creating efficient systems.
-                        I'm always curious, eager to learn, and motivated to contribute to innovative teams working
-                        on cutting-edge technologies.
+                        What drives me is the challenge of solving complex problems and creating efficient systems. I’m naturally curious, eager to learn, and motivated to contribute to innovative teams working with cutting-edge technologies.
                     </p>
                 </div>
             </section>
