@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import './Home.css';
 import profileImage from './images/profile_picture.jpg';
-import {FaLinkedin, FaGithub, FaEnvelope, FaFileDownload, FaServer} from 'react-icons/fa';
+import {FaLinkedin, FaGithub, FaEnvelope, FaFileDownload, FaServer, FaHome, FaProjectDiagram} from 'react-icons/fa';
 import { SiSpringboot, SiMysql, SiDocker } from 'react-icons/si';
-import {FaCode, FaReact} from "react-icons/fa6";
+import {FaAddressBook, FaCode, FaReact, FaUser} from "react-icons/fa6";
 
 function Home() {
     useEffect(() => {
@@ -14,6 +14,13 @@ function Home() {
             }, index * 200);
         });
     }, []);
+
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     const skills = [
         { name: 'Spring Boot', icon: <SiSpringboot />, level: 95 },
@@ -26,6 +33,30 @@ function Home() {
 
     return (
         <div className="portfolio-container">
+
+            <nav className="navbar">
+                <div className="navbar-container">
+                    <div className="navbar-logo"></div>
+                    <div className="navbar-links">
+                        <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="nav-link">
+                            <FaHome className="nav-icon" /> Home
+                        </button>
+                        <button onClick={() => scrollToSection('projects')} className="nav-link">
+                            <FaProjectDiagram className="nav-icon" /> Projects
+                        </button>
+                        <button onClick={() => scrollToSection('about')} className="nav-link">
+                            <FaUser className="nav-icon" /> About
+                        </button>
+                        <button onClick={() => scrollToSection('skills')} className="nav-link">
+                            <FaCode className="nav-icon" /> Skills
+                        </button>
+                        <button onClick={() => scrollToSection('contact')} className="nav-link">
+                            <FaAddressBook className="nav-icon" /> Contact
+                        </button>
+                    </div>
+                </div>
+            </nav>
+
             <section className="hero-section">
                 <div className="hero-content animate-on-load">
                     <div className="profile-image-container">
