@@ -9,6 +9,7 @@ import notes from '../images/Pluto/notes.png';
 import profile from '../images/Pluto/profile.png';
 import schema from '../images/Pluto/schema.png';
 import signup from '../images/Pluto/sign up.png';
+import diagram from '../images/Pluto/diagram.png'
 import {useNavigate} from "react-router-dom";
 
 const Pluto = () => {
@@ -90,6 +91,12 @@ const Pluto = () => {
             alt: 'Calendar',
             caption: 'Calendar',
             description: 'The calendar page shows a monthly grid with the current date highlighted. Users can navigate between months and click any day to add or edit calender day.'
+        },
+        {
+            src: diagram,
+            alt: 'Diagram',
+            caption: 'Relationship Diagram',
+            description: 'An overview of the Database Relationship Diagram used in the Spring Boot application.'
         },
     ];
 
