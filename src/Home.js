@@ -5,6 +5,7 @@ import {FaLinkedin, FaGithub, FaEnvelope, FaServer, FaHome, FaProjectDiagram} fr
 import { SiSpringboot, SiMysql, SiDocker } from 'react-icons/si';
 import {FaAddressBook, FaCode, FaReact, FaUser} from "react-icons/fa6";
 import dashboardImage from './images/Pluto/dashboard.png';
+import Clique from './images/Clique/groupchat.png';
 import {Link} from "react-router-dom";
 import emailjs from '@emailjs/browser';
 
@@ -108,7 +109,7 @@ function Home() {
             </section>
 
             <section id="projects" className="section projects-section">
-                <h2 className="section-title animate-on-load">My Projects</h2>
+                <h2 className="section-title animate-on-load">Hobby Projects</h2>
                 <div className="projects-grid animate-on-load">
                     <div className="project-card">
                         <Link to="/pluto">
@@ -121,13 +122,18 @@ function Home() {
                         </Link>
                     </div>
                     <div className="project-card">
-                        <div className="project-placeholder">
-                            <span className="project-label">In Progress</span>
-                        </div>
+                        <Link to="/Clique">
+                            <div
+                                className="project-placeholder Clique-project"
+                                style={{ backgroundImage: `url(${Clique})` }}
+                            >
+                                <span className="project-label">Clique</span>
+                            </div>
+                        </Link>
                     </div>
                     <div className="project-card">
                         <div className="project-placeholder">
-                            <span className="project-label">In Progress</span>
+                            <span className="project-label">In Development</span>
                         </div>
                     </div>
                 </div>
