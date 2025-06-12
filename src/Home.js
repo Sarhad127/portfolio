@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import './Home.css';
-import profileImage from './images/profile_picture.jpg';
+import profileImage from './images/profile_picture2.jpg';
 import {FaLinkedin, FaGithub, FaEnvelope, FaServer, FaHome, FaProjectDiagram} from 'react-icons/fa';
 import { SiSpringboot, SiMysql, SiDocker } from 'react-icons/si';
 import {FaAddressBook, FaCode, FaReact, FaUser} from "react-icons/fa6";
@@ -45,8 +45,11 @@ function Home() {
         { name: 'MySQL', icon: <SiMysql />, level: 80 },
         { name: 'Docker', icon: <SiDocker />, level: 70 },
         { name: 'REST APIs', icon: <FaCode />, level: 95 },
+        { name: 'C#', icon: <FaReact />, level: 90 },
         { name: 'Microservices', icon: <FaServer />, level: 50 },
-        { name: 'React', icon: <FaReact />, level: 80 },
+        { name: 'React', icon: <FaReact />, level: 85 },
+        { name: 'JavaScript', icon: <FaReact />, level: 80 },
+        { name: 'HTML & CSS', icon: <FaReact />, level: 90 },
     ];
 
     return (
@@ -83,13 +86,11 @@ function Home() {
                     </div>
 
                     <div className="hero-text">
-                        <h1 className="greeting">Hello, I'm <span className="highlight">Sarhad Bahrami</span></h1>
-                        <h2 className="title">A newly graduated Java Backend Developer from Nackademin.</h2>
+                        <h1 className="greeting"><span className="highlight">Sarhad Bahrami</span></h1>
+                        <h2 className="title">Java Backend Developer from Nackademin.</h2>
                         <p className="summary">
-                            I build robust, scalable backend systems with Java and Spring ecosystem.
-                            Passionate about clean code, system architecture, and solving complex problems.
+                            A software developer with a focus on both backend and frontend development.
                         </p>
-
                         <div className="cta-buttons">
                             <a href="#contact" className="btn btn-primary">
                                 <FaEnvelope /> Contact Me
@@ -117,7 +118,7 @@ function Home() {
                             className="project-placeholder pluto-project"
                             style={{ backgroundImage: `url(${dashboardImage})` }}
                         >
-                            <span className="project-label">Pluto</span>
+                            {/*<span className="project-label">Pluto</span>*/}
                         </div>
                         </Link>
                     </div>
@@ -127,7 +128,7 @@ function Home() {
                                 className="project-placeholder Clique-project"
                                 style={{ backgroundImage: `url(${Clique})` }}
                             >
-                                <span className="project-label">Clique</span>
+                                {/*<span className="project-label">Clique</span>*/}
                             </div>
                         </Link>
                     </div>
@@ -143,13 +144,7 @@ function Home() {
                 <h2 className="section-title animate-on-load">About Me</h2>
                 <div className="about-content animate-on-load">
                     <p>
-                        I’m a passionate software developer specializing in Java and backend technologies such as Spring Boot, REST APIs, and MySQL. With a strong foundation in computer science principles, I enjoy building clean, scalable solutions and collaborating effectively within agile teams.
-                    </p>
-                    <p>
-                        Recently, I completed my education at Nackademin, where I worked on exciting projects involving microservices architecture, machine learning integration, and secure web development using Spring Security.
-                    </p>
-                    <p>
-                        What drives me is the challenge of solving complex problems and creating efficient systems. I’m naturally curious, eager to learn, and motivated to contribute to innovative teams working with cutting-edge technologies.
+                        I'm a software developer passionate about both backend and frontend development. I mainly work with Java, Spring Boot, and MySQL, and build modern UIs using React and JavaScript. I enjoy creating fullstack applications with various languages and constantly exploring new tools.
                     </p>
                 </div>
             </section>
