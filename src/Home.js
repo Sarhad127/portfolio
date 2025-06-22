@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import './Home.css';
 import profileImage from './images/profile_picture2.jpg';
 import {FaLinkedin, FaGithub, FaEnvelope, FaServer, FaHome, FaProjectDiagram} from 'react-icons/fa';
-import { SiSpringboot, SiMysql, SiDocker } from 'react-icons/si';
+import {SiSpringboot, SiMysql, SiDocker, SiHtml5, SiCss3, SiJavascript, SiDotnet } from 'react-icons/si';
 import {FaAddressBook, FaCode, FaReact, FaUser} from "react-icons/fa6";
 import dashboardImage from './images/Pluto/dashboard.png';
 import Clique from './images/Clique/groupchat.png';
@@ -45,11 +45,15 @@ function Home() {
         { name: 'MySQL', icon: <SiMysql />, level: 80 },
         { name: 'Docker', icon: <SiDocker />, level: 70 },
         { name: 'REST APIs', icon: <FaCode />, level: 95 },
-        { name: 'C#', icon: <FaReact />, level: 90 },
+        { name: 'C#', icon: <SiDotnet   />, level: 90 },
         { name: 'Microservices', icon: <FaServer />, level: 50 },
         { name: 'React', icon: <FaReact />, level: 85 },
-        { name: 'JavaScript', icon: <FaReact />, level: 80 },
-        { name: 'HTML & CSS', icon: <FaReact />, level: 90 },
+        { name: 'JavaScript', icon: <SiJavascript />, level: 80 },
+        { name: 'HTML & CSS', icon: (
+                <span style={{ display: 'flex', gap: '4px' }}>
+            <SiHtml5 /> <SiCss3 />
+        </span>
+            ), level: 90 },
     ];
 
     return (
@@ -110,7 +114,7 @@ function Home() {
             </section>
 
             <section id="projects" className="section projects-section">
-                <h2 className="section-title animate-on-load">Hobby Projects</h2>
+                <h2 className="section-title animate-on-load">Projects</h2>
                 <div className="projects-grid animate-on-load">
                     <div className="project-card">
                         <Link to="/pluto">
