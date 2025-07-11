@@ -1,18 +1,14 @@
 import React, {useEffect, useState} from 'react';
 import {FaGithub, FaHome} from 'react-icons/fa';
-import login from '../images/Clique/login.png';
-import signup from '../images/Clique/register.png';
-import home from '../images/Clique/home.png';
-import profile from '../images/Clique/profile.png';
-import friends from '../images/Clique/friends.png';
-import chat from '../images/Clique/chat.png';
-import groupChat from '../images/Clique/groupchat.png';
-import background from '../images/Clique/background.png';
+import './SpringSecurityTests.css';
 
-
+import contentController from '../images/SpringSecurityTests/contentcontroller.png'
+import discountService from '../images/SpringSecurityTests/discountservice.png'
+import palindrome from '../images/SpringSecurityTests/palindrome.png'
+import registrationController from '../images/SpringSecurityTests/registrationcontroller.png'
 import {useNavigate} from "react-router-dom";
 
-const Clique = () => {
+const SpringSecurityTests = () => {
     const navigate = useNavigate();
     const [selectedImageIndex, setSelectedImageIndex] = useState(null);
 
@@ -49,52 +45,32 @@ const Clique = () => {
 
     const images = [
         {
-            src: home,
-            alt: 'Home',
-            caption: 'Home Page',
-            description: 'A clean home page featuring login and registration buttons. The background images transition smoothly every 5 seconds with a swipe animation.'
+            src: contentController,
+            alt: 'Pages',
+            caption: 'Pages',
+            description: 'The ContentController defines routes for the main, user, admin, and login pages using Spring MVC. It serves different views based on user roles.\n' +
+                'The ContentControllerTest uses Spring Boot and MockMvc to test access to these pages. It ensures public pages are reachable without login, and that role-protected pages (like /user/home and /admin/home) are only accessible by authenticated users with the correct roles.\n'
         },
         {
-            src: login,
-            alt: 'Login',
-            caption: 'Login Page',
-            description: 'Users can log in, register, or use the forgotten password feature with email verification. The page includes a "Remember Me" option and a "Show Password" toggle.'
+            src: registrationController,
+            alt: 'Registration',
+            caption: 'Registration',
+            description: 'The RegistrationController handles user registration. It saves users to the database with encrypted passwords and returns the saved user. It also catches input-related errors.\n' +
+                'The RegistrationControllerTest uses MockMvc to test registration logic. It verifies that valid users are saved correctly with hashed passwords and that missing data triggers an error response.'
         },
         {
-            src: signup,
-            alt: 'Sign Up',
-            caption: 'Registration Page',
-            description: 'Users can sign up using their email (which serves as the unique identifier), username, and double password input for added security.'
+            src: discountService,
+            alt: 'Discount',
+            caption: 'Discount',
+            description: 'The DiscountService calculates discounts based on promo codes and the current year. It applies special offers like 10% off for "THANKSGIVING" and 25% off for "XMAS" in 2025.\n' +
+                'The DiscountServiceTest uses Spring Boot and Mockito to verify that discounts are correctly calculated. It mocks the current year to test time-dependent logic, ensuring accurate results for different promo scenarios.'
         },
         {
-            src: chat,
-            alt: 'Chat',
-            caption: 'Chat Page',
-            description: 'Chats are displayed in the second container, showing the friend\'s username, timestamp of the last message, and a preview of the message (indicating whether it was sent by you or the friend).'
-        },
-        {
-            src: groupChat,
-            alt: 'Group Chat',
-            caption: 'Group Chat Page',
-            description: 'Group chats are displayed in the second container with user avatars, group titles, and last message previews. The chat box shows messages with usernames, avatars, and timestamps. The right panel displays group information including title, members, and options to invite friends, change the group background, or leave the group. If a member isn\'t already a friend, an "Add Friend" button appears.'
-        },
-        {
-            src: background,
-            alt: 'Background',
-            caption: 'Background',
-            description: 'A simple interface for changing chat backgrounds. Each background is unique to its specific group chat.'
-        },
-        {
-            src: profile,
-            alt: 'Profile',
-            caption: 'Profile Page',
-            description: 'Users can customize their profile by changing their avatar, updating their username, and adding a personal description.'
-        },
-        {
-            src: friends,
-            alt: 'Friends',
-            caption: 'Friends Page',
-            description: 'Displays the friends list in the second container, with detailed friend information on the right side. Features include: starting a chat, removing friends, and adding new friends.'
+            src: palindrome,
+            alt: 'Palindrome',
+            caption: 'Palindrome',
+            description: 'The StringProcessorService checks if a given string is a palindrome by comparing it to its reversed version.\n' +
+                'The StringProcessorServiceTest verifies this logic with valid, invalid, and null inputs. It ensures the method behaves correctly and throws an exception when input is null.'
         },
     ];
 
@@ -104,36 +80,32 @@ const Clique = () => {
             <nav className="pluto-navbar">
                 <div className="navbar-pluto-content">
                     <div className="navbar-links">
-                        <button onClick={handleBackClick} className="nav-button">
-                            <FaHome className="nav-icon" />
-                            <span>Back to Home</span>
-                        </button>
-                    </div>
+                    <button onClick={handleBackClick} className="nav-button">
+                        <FaHome className="nav-icon" />
+                        <span>Back to Home</span>
+                    </button>
+                </div>
                 </div>
             </nav>
 
             <section className="project-description">
-                <h2>Clique</h2>
+                <h2>Unit testing</h2>
                 <p>
-                    Clique is a full-featured chat application that uses WebSockets for real-time communication, enabling users to sign up, log in, add friends, and start one-on-one or group conversations with instant message updates.
+                    This project covers tests for spring security login system with roles attached to users being saved to database.
                 </p>
             </section>
 
             <section className="repo-links">
-                <a href="https://github.com/Sarhad127/Clique-Frontend" target="_blank" rel="noopener noreferrer" className="repo-link">
+                <a href="https://github.com/Sarhad127/SpringSecurityTests.git" target="_blank" rel="noopener noreferrer" className="repo-link">
                     <FaGithub size={24} />
-                    <span>Frontend Repo</span>
-                </a>
-                <a href="https://github.com/Sarhad127/Clique-Backend" target="_blank" rel="noopener noreferrer" className="repo-link">
-                    <FaGithub size={24} />
-                    <span>Backend Repo</span>
+                    <span>Repository</span>
                 </a>
             </section>
 
             <div className="image-gallery">
                 {images.map((image, index) => (
                     <div key={index} className="gallery-item" onClick={() => openModal(index)}>
-                        <div className="image-container">
+                    <div className="image-container">
                             <img src={image.src} alt={image.alt} className="gallery-image" />
                         </div>
                         <div className="image-text">
@@ -185,4 +157,4 @@ const Clique = () => {
     );
 };
 
-export default Clique;
+export default SpringSecurityTests;
