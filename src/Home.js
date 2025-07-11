@@ -6,6 +6,7 @@ import {SiSpringboot, SiMysql, SiDocker, SiHtml5, SiCss3, SiJavascript, SiDotnet
 import {FaAddressBook, FaCode, FaReact, FaUser} from "react-icons/fa6";
 import dashboardImage from './images/Pluto/dashboard.png';
 import Clique from './images/Clique/groupchat.png';
+import Discount from './images/SpringSecurityTests/discountservice.png';
 import {Link} from "react-router-dom";
 import emailjs from '@emailjs/browser';
 
@@ -137,9 +138,14 @@ function Home() {
                         </Link>
                     </div>
                     <div className="project-card">
-                        <div className="project-placeholder">
-                            <span className="project-label">In Development</span>
-                        </div>
+                        <Link to="/SpringSecurityTests">
+                            <div
+                                className="project-placeholder Clique-project"
+                                style={{ backgroundImage: `url(${Discount})` }}
+                            >
+                                {/*<span className="project-label">Discount</span>*/}
+                            </div>
+                        </Link>
                     </div>
                 </div>
             </section>
