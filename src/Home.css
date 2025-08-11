@@ -430,6 +430,28 @@ body {
     color: inherit;
 }
 
+.dotnet-project {
+    background-color: #f0f0f0;
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.dotnet-project h3 {
+    position: relative;
+    z-index: 9999;
+    color: #333;
+    background: transparent;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
 @media (max-width: 576px) {
     .cta-buttons {
         flex-direction: column;

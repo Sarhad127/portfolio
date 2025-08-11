@@ -147,6 +147,15 @@ function Home() {
                             </div>
                         </Link>
                     </div>
+                    <div className="project-card">
+                        <Link to="/dotnet-project">
+                            <div
+                                className="project-placeholder dotnet-project"
+                            >
+                                <h3>.NET Project in development</h3>
+                            </div>
+                        </Link>
+                    </div>
                 </div>
             </section>
 
