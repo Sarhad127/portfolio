@@ -1,8 +1,18 @@
 import { useEffect } from 'react';
 import './Home.css';
 import profileImage from './images/profile_picture2.jpg';
-import {FaLinkedin, FaGithub, FaEnvelope, FaServer, FaHome, FaProjectDiagram} from 'react-icons/fa';
-import {SiSpringboot, SiMysql, SiDocker, SiHtml5, SiCss3, SiJavascript, SiDotnet } from 'react-icons/si';
+import {FaLinkedin, FaGithub, FaEnvelope, FaHome, FaProjectDiagram} from 'react-icons/fa';
+import {
+    SiSpringboot,
+    SiMysql,
+    SiDocker,
+    SiHtml5,
+    SiCss3,
+    SiJavascript,
+    SiTypescript,
+    SiGithub,
+    SiGit
+} from 'react-icons/si';
 import {FaAddressBook, FaCode, FaReact, FaUser} from "react-icons/fa6";
 import dashboardImage from './images/Pluto/dashboard.png';
 import Clique from './images/Clique/groupchat.png';
@@ -42,19 +52,16 @@ function Home() {
     };
 
     const skills = [
-        { name: 'Spring Boot', icon: <SiSpringboot />, level: 95 },
-        { name: 'MySQL', icon: <SiMysql />, level: 80 },
-        { name: 'Docker', icon: <SiDocker />, level: 70 },
-        { name: 'REST APIs', icon: <FaCode />, level: 95 },
-        { name: 'C#', icon: <SiDotnet   />, level: 90 },
-        { name: 'Microservices', icon: <FaServer />, level: 50 },
-        { name: 'React', icon: <FaReact />, level: 85 },
-        { name: 'JavaScript', icon: <SiJavascript />, level: 80 },
-        { name: 'HTML & CSS', icon: (
-                <span style={{ display: 'flex', gap: '4px' }}>
-            <SiHtml5 /> <SiCss3 />
-        </span>
-            ), level: 90 },
+        { name: 'Spring Boot', icon: <SiSpringboot /> },
+        { name: 'MySQL', icon: <SiMysql /> },
+        { name: 'Docker', icon: <SiDocker /> },
+        { name: 'HTML', icon: <SiHtml5 /> },
+        { name: 'CSS', icon: <SiCss3 /> },
+        { name: 'JavaScript', icon: <SiJavascript /> },
+        { name: 'TypeScript', icon: <SiTypescript /> },
+        { name: 'React', icon: <FaReact /> },
+        { name: 'Git', icon: <SiGit /> },
+        { name: 'GitHub', icon: <SiGithub /> },
     ];
 
     return (
@@ -92,9 +99,9 @@ function Home() {
 
                     <div className="hero-text">
                         <h1 className="greeting"><span className="highlight">Sarhad Bahrami</span></h1>
-                        <h2 className="title">Java Backend Developer from Nackademin.</h2>
+                        <h2 className="title">Full Stack Developer from Nackademin.</h2>
                         <p className="summary">
-                            A software developer with a focus on both backend and frontend development.
+                            A passionate software developer with expertise in both backend and frontend development.
                         </p>
                         <div className="cta-buttons">
                             <a href="#contact" className="btn btn-primary">
@@ -147,46 +154,28 @@ function Home() {
                             </div>
                         </Link>
                     </div>
-                    <div className="project-card">
-                        <Link to="/dotnet-project">
-                            <div
-                                className="project-placeholder dotnet-project"
-                            >
-                                <h3>.NET Project in development</h3>
-                            </div>
-                        </Link>
-                    </div>
                 </div>
             </section>
 
             <section id="about" className="section about-section">
                 <h2 className="section-title animate-on-load">About Me</h2>
                 <div className="about-content animate-on-load">
-                    <p>
-                        I'm a software developer passionate about both backend and frontend development. I mainly work with Java, Spring Boot, and MySQL, and build modern UIs using React and JavaScript. I enjoy creating fullstack applications with various languages and constantly exploring new tools.
-                    </p>
+                  <p>I'm a fullstack software developer with a passion for creating robust backend systems and modern, intuitive frontends. I specialize in Java, Spring Boot, and MySQL for backend development and build dynamic UIs using React, JavaScript, and TypeScript. I enjoy developing fullstack applications, integrating tools like Docker, Git, and GitHub, and continuously exploring new technologies to deliver clean, efficient, and scalable solutions.</p>
                 </div>
             </section>
 
             <section id="skills" className="section skills-section">
-                <h2 className="section-title animate-on-load">Technical Skills</h2>
-                <div className="skills-grid animate-on-load">
+                <h2 className="section-title animate-on-load">My Skills</h2>
+                <ul className="skills-list animate-on-load">
                     {skills.map((skill, index) => (
-                        <div key={index} className="skill-item">
+                        <li key={index} className="skill-item">
                             <div className="skill-icon">{skill.icon}</div>
                             <div className="skill-info">
                                 <h3>{skill.name}</h3>
-                                <div className="skill-bar">
-                                    <div
-                                        className="skill-level"
-                                        style={{ width: `${skill.level}%` }}
-                                        data-level={skill.level}
-                                    ></div>
-                                </div>
                             </div>
-                        </div>
+                        </li>
                     ))}
-                </div>
+                </ul>
             </section>
 
             <section id="contact" className="section contact-section">
