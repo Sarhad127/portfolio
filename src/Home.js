@@ -19,6 +19,9 @@ import Clique from './images/Clique/groupchat.png';
 import Discount from './images/SpringSecurityTests/discountservice.png';
 import {Link} from "react-router-dom";
 import emailjs from '@emailjs/browser';
+import PlutoIcon from './icons/pluto-icon.png';
+import CliqueIcon from './icons/Clique-icon-2.png';
+import TestingIcon from './icons/testing-icon.png';
 
 function sendEmail(e) {
     e.preventDefault();
@@ -62,6 +65,12 @@ function Home() {
         { name: 'React', icon: <FaReact /> },
         { name: 'Git', icon: <SiGit /> },
         { name: 'GitHub', icon: <SiGithub /> },
+    ];
+
+    const projects = [
+        { name: 'Pluto', image: dashboardImage, link: '/pluto', icon: PlutoIcon },
+        { name: 'Clique', image: Clique, link: '/Clique', icon: CliqueIcon },
+        { name: 'Discount Service', image: Discount, link: '/SpringSecurityTests', icon: TestingIcon },
     ];
 
     return (
@@ -124,36 +133,22 @@ function Home() {
             <section id="projects" className="section projects-section">
                 <h2 className="section-title animate-on-load">Projects</h2>
                 <div className="projects-grid animate-on-load">
-                    <div className="project-card">
-                        <Link to="/pluto">
-                        <div
-                            className="project-placeholder pluto-project"
-                            style={{ backgroundImage: `url(${dashboardImage})` }}
-                        >
-                            {/*<span className="project-label">Pluto</span>*/}
+                    {projects.map((project, index) => (
+                        <div key={index} className="project-card">
+                            <div className="project-container">
+                                <h3 className="project-name">
+                                    <img src={project.icon} alt={`${project.name} icon`} className="project-icon" />
+                                    {project.name}
+                                </h3>
+                                <Link to={project.link}>
+                                    <div
+                                        className="project-image"
+                                        style={{ backgroundImage: `url(${project.image})` }}
+                                    ></div>
+                                </Link>
+                            </div>
                         </div>
-                        </Link>
-                    </div>
-                    <div className="project-card">
-                        <Link to="/Clique">
-                            <div
-                                className="project-placeholder Clique-project"
-                                style={{ backgroundImage: `url(${Clique})` }}
-                            >
-                                {/*<span className="project-label">Clique</span>*/}
-                            </div>
-                        </Link>
-                    </div>
-                    <div className="project-card">
-                        <Link to="/SpringSecurityTests">
-                            <div
-                                className="project-placeholder Clique-project"
-                                style={{ backgroundImage: `url(${Discount})` }}
-                            >
-                                {/*<span className="project-label">Discount</span>*/}
-                            </div>
-                        </Link>
-                    </div>
+                    ))}
                 </div>
             </section>
 
