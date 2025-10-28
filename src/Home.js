@@ -1,14 +1,33 @@
-import { useEffect } from 'react';
+import {useEffect, useState} from 'react';
 import './Home.css';
 import profileImage from './images/profile_picture2.jpg';
-import {FaLinkedin, FaGithub, FaEnvelope, FaServer, FaHome, FaProjectDiagram} from 'react-icons/fa';
-import {SiSpringboot, SiMysql, SiDocker, SiHtml5, SiCss3, SiJavascript, SiDotnet } from 'react-icons/si';
+import {FaLinkedin, FaGithub, FaEnvelope, FaHome, FaProjectDiagram, FaBars} from 'react-icons/fa';
+import {
+    SiSpringboot,
+    SiMysql,
+    SiDocker,
+    SiHtml5,
+    SiCss3,
+    SiJavascript,
+    SiTypescript,
+    SiGithub,
+    SiGit
+} from 'react-icons/si';
 import {FaAddressBook, FaCode, FaReact, FaUser} from "react-icons/fa6";
 import dashboardImage from './images/Pluto/dashboard.png';
 import Clique from './images/Clique/groupchat.png';
 import Discount from './images/SpringSecurityTests/discountservice.png';
 import {Link} from "react-router-dom";
 import emailjs from '@emailjs/browser';
+import PlutoIcon from './icons/pluto-icon.png';
+import CliqueIcon from './icons/Clique-icon-2.png';
+import TestingIcon from './icons/testing-icon.png';
+import './Style/Projects.css'
+import './Style/Skills.css'
+import './Style/Navbar.css'
+import './Style/hero.css'
+import './Style/About.css'
+import './Style/Contact.css'
 
 function sendEmail(e) {
     e.preventDefault();
@@ -42,64 +61,79 @@ function Home() {
     };
 
     const skills = [
-        { name: 'Spring Boot', icon: <SiSpringboot />, level: 95 },
-        { name: 'MySQL', icon: <SiMysql />, level: 80 },
-        { name: 'Docker', icon: <SiDocker />, level: 70 },
-        { name: 'REST APIs', icon: <FaCode />, level: 95 },
-        { name: 'C#', icon: <SiDotnet   />, level: 90 },
-        { name: 'Microservices', icon: <FaServer />, level: 50 },
-        { name: 'React', icon: <FaReact />, level: 85 },
-        { name: 'JavaScript', icon: <SiJavascript />, level: 80 },
-        { name: 'HTML & CSS', icon: (
-                <span style={{ display: 'flex', gap: '4px' }}>
-            <SiHtml5 /> <SiCss3 />
-        </span>
-            ), level: 90 },
+        { name: 'Spring Boot', icon: <SiSpringboot /> },
+        { name: 'MySQL', icon: <SiMysql /> },
+        { name: 'Docker', icon: <SiDocker /> },
+        { name: 'HTML', icon: <SiHtml5 /> },
+        { name: 'CSS', icon: <SiCss3 /> },
+        { name: 'JavaScript', icon: <SiJavascript /> },
+        { name: 'TypeScript', icon: <SiTypescript /> },
+        { name: 'React', icon: <FaReact /> },
+        { name: 'Git', icon: <SiGit /> },
+        { name: 'GitHub', icon: <SiGithub /> },
     ];
+
+    const projects = [
+        { name: 'Pluto', image: dashboardImage, link: '/pluto', icon: PlutoIcon },
+        { name: 'Clique', image: Clique, link: '/Clique', icon: CliqueIcon },
+        { name: 'Discount Service', image: Discount, link: '/SpringSecurityTests', icon: TestingIcon },
+    ];
+
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
     return (
         <div className="portfolio-container">
 
             <nav className="navbar">
                 <div className="navbar-container">
-                    <div className="navbar-logo"></div>
-                    <div className="navbar-links">
+                    <button className="menu-toggle" onClick={toggleMenu}>
+                        <FaBars />
+                    </button>
+                    <div className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
                         <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="nav-link">
-                            <FaHome className="nav-icon" /> Home
+                            <FaHome className="nav-icon" /> <span>Home</span>
                         </button>
                         <button onClick={() => scrollToSection('projects')} className="nav-link">
-                            <FaProjectDiagram className="nav-icon" /> Projects
+                            <FaProjectDiagram className="nav-icon" /> <span>Projects</span>
                         </button>
                         <button onClick={() => scrollToSection('about')} className="nav-link">
-                            <FaUser className="nav-icon" /> About
+                            <FaUser className="nav-icon" /> <span>About</span>
                         </button>
                         <button onClick={() => scrollToSection('skills')} className="nav-link">
-                            <FaCode className="nav-icon" /> Skills
+                            <FaCode className="nav-icon" /> <span>Skills</span>
                         </button>
                         <button onClick={() => scrollToSection('contact')} className="nav-link">
-                            <FaAddressBook className="nav-icon" /> Contact
+                            <FaAddressBook className="nav-icon" /> <span>Contact</span>
                         </button>
                     </div>
                 </div>
             </nav>
 
             <section className="hero-section">
-                <div className="hero-content animate-on-load">
+                <div className="hero-content">
                     <div className="profile-image-container">
                         <img src={profileImage} alt="Sarhad Bahrami" className="profile-image" />
-                        <div className="image-border"></div>
                     </div>
 
                     <div className="hero-text">
                         <h1 className="greeting"><span className="highlight">Sarhad Bahrami</span></h1>
-                        <h2 className="title">Java Backend Developer from Nackademin.</h2>
+                        <h2 className="title">Full Stack Developer from Nackademin.</h2>
                         <p className="summary">
-                            A software developer with a focus on both backend and frontend development.
+                            A passionate software developer with expertise in both backend and frontend development.
                         </p>
                         <div className="cta-buttons">
-                            <a href="#contact" className="btn btn-primary">
+                            <button
+                                className="btn btn-primary"
+                                onClick={() => {
+                                    const contactSection = document.getElementById('contact');
+                                    if (contactSection) {
+                                        contactSection.scrollIntoView({ behavior: 'smooth' });
+                                    }
+                                }}
+                            >
                                 <FaEnvelope /> Contact Me
-                            </a>
+                            </button>
                         </div>
 
                         <div className="social-links">
@@ -114,74 +148,51 @@ function Home() {
                 </div>
             </section>
 
-            <section id="projects" className="section projects-section">
-                <h2 className="section-title animate-on-load">Projects</h2>
-                <div className="projects-grid animate-on-load">
-                    <div className="project-card">
-                        <Link to="/pluto">
-                        <div
-                            className="project-placeholder pluto-project"
-                            style={{ backgroundImage: `url(${dashboardImage})` }}
-                        >
-                            {/*<span className="project-label">Pluto</span>*/}
-                        </div>
-                        </Link>
-                    </div>
-                    <div className="project-card">
-                        <Link to="/Clique">
-                            <div
-                                className="project-placeholder Clique-project"
-                                style={{ backgroundImage: `url(${Clique})` }}
-                            >
-                                {/*<span className="project-label">Clique</span>*/}
-                            </div>
-                        </Link>
-                    </div>
-                    <div className="project-card">
-                        <Link to="/SpringSecurityTests">
-                            <div
-                                className="project-placeholder Clique-project"
-                                style={{ backgroundImage: `url(${Discount})` }}
-                            >
-                                {/*<span className="project-label">Discount</span>*/}
-                            </div>
-                        </Link>
-                    </div>
-                </div>
-            </section>
-
-            <section id="about" className="section about-section">
-                <h2 className="section-title animate-on-load">About Me</h2>
-                <div className="about-content animate-on-load">
-                    <p>
-                        I'm a software developer passionate about both backend and frontend development. I mainly work with Java, Spring Boot, and MySQL, and build modern UIs using React and JavaScript. I enjoy creating fullstack applications with various languages and constantly exploring new tools.
-                    </p>
-                </div>
-            </section>
-
-            <section id="skills" className="section skills-section">
-                <h2 className="section-title animate-on-load">Technical Skills</h2>
-                <div className="skills-grid animate-on-load">
-                    {skills.map((skill, index) => (
-                        <div key={index} className="skill-item">
-                            <div className="skill-icon">{skill.icon}</div>
-                            <div className="skill-info">
-                                <h3>{skill.name}</h3>
-                                <div className="skill-bar">
+            <section id="projects" className="section-projects-section">
+                <h2 className="section-title-project">Projects</h2>
+                <div className="projects-grid">
+                    {projects.map((project, index) => (
+                        <div key={index} className="project-card">
+                            <div className="project-container">
+                                <h3 className="project-name">
+                                    <img src={project.icon} alt={`${project.name} icon`} className="project-icon" />
+                                    {project.name}
+                                </h3>
+                                <Link to={project.link}>
                                     <div
-                                        className="skill-level"
-                                        style={{ width: `${skill.level}%` }}
-                                        data-level={skill.level}
+                                        className="project-image"
+                                        style={{ backgroundImage: `url(${project.image})` }}
                                     ></div>
-                                </div>
+                                </Link>
                             </div>
                         </div>
                     ))}
                 </div>
             </section>
 
-            <section id="contact" className="section contact-section">
-                <h2 className="section-title animate-on-load">Get In Touch</h2>
+            <section id="about" className="about about-section">
+                <h2 className="about-title animate-on-load">About Me</h2>
+                <div className="about-content animate-on-load">
+                  <p>I'm a fullstack software developer with a passion for creating robust backend systems and modern, intuitive frontends. I specialize in Java, Spring Boot, and MySQL for backend development and build dynamic UIs using React, JavaScript, and TypeScript. I enjoy developing fullstack applications, integrating tools like Docker, Git, and GitHub, and continuously exploring new technologies to deliver clean, efficient, and scalable solutions.</p>
+                </div>
+            </section>
+
+            <section id="skills" className="section-skills">
+                <h2 className="section-title-skills">My Skills</h2>
+                <ul className="skills-list">
+                    {skills.map((skill, index) => (
+                        <li key={index} className="skill-item">
+                            <div className="skill-icon">{skill.icon}</div>
+                            <div className="skill-info">
+                                <h3>{skill.name}</h3>
+                            </div>
+                        </li>
+                    ))}
+                </ul>
+            </section>
+
+            <section id="contact" className="contact">
+                <h2 className="contact-title animate-on-load">Get In Touch</h2>
                 <form className="contact-form animate-on-load" onSubmit={sendEmail}>
                     <div className="form-group">
                         <input type="text" name="user_name" placeholder="Your Name" required />
@@ -192,7 +203,7 @@ function Home() {
                     <div className="form-group">
                         <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" className="btn btn-primary">Send Message</button>
+                    <button type="submit" className="contact-btn contact-btn-primary">Send Message</button>
                 </form>
             </section>
         </div>

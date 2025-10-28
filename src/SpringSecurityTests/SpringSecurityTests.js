@@ -1,12 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import {FaGithub, FaHome} from 'react-icons/fa';
-import './SpringSecurityTests.css';
-
 import contentController from '../images/SpringSecurityTests/contentcontroller.png'
 import discountService from '../images/SpringSecurityTests/discountservice.png'
 import palindrome from '../images/SpringSecurityTests/palindrome.png'
 import registrationController from '../images/SpringSecurityTests/registrationcontroller.png'
 import {useNavigate} from "react-router-dom";
+import '../Style/Apps.css'
 
 const SpringSecurityTests = () => {
     const navigate = useNavigate();
@@ -75,13 +74,13 @@ const SpringSecurityTests = () => {
     ];
 
     return (
-        <div className="pluto-container">
+        <div className="app-container">
 
-            <nav className="pluto-navbar">
-                <div className="navbar-pluto-content">
-                    <div className="navbar-links">
-                    <button onClick={handleBackClick} className="nav-button">
-                        <FaHome className="nav-icon" />
+            <nav className="app-navbar">
+                <div className="navbar-app-content">
+                    <div className="app-navbar-links">
+                    <button onClick={handleBackClick} className="app-nav-button">
+                        <FaHome className="app-nav-icon" />
                         <span>Back to Home</span>
                     </button>
                 </div>
