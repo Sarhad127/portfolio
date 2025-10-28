@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
+import {useEffect, useState} from 'react';
 import './Home.css';
 import profileImage from './images/profile_picture2.jpg';
-import {FaLinkedin, FaGithub, FaEnvelope, FaHome, FaProjectDiagram} from 'react-icons/fa';
+import {FaLinkedin, FaGithub, FaEnvelope, FaHome, FaProjectDiagram, FaBars} from 'react-icons/fa';
 import {
     SiSpringboot,
     SiMysql,
@@ -23,7 +23,10 @@ import PlutoIcon from './icons/pluto-icon.png';
 import CliqueIcon from './icons/Clique-icon-2.png';
 import TestingIcon from './icons/testing-icon.png';
 import './Style/Projects.css'
-import './Style/skills.css'
+import './Style/Skills.css'
+import './Style/Navbar.css'
+import './Style/hero.css'
+
 function sendEmail(e) {
     e.preventDefault();
 
@@ -74,37 +77,41 @@ function Home() {
         { name: 'Discount Service', image: Discount, link: '/SpringSecurityTests', icon: TestingIcon },
     ];
 
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
     return (
         <div className="portfolio-container">
 
             <nav className="navbar">
                 <div className="navbar-container">
-                    <div className="navbar-logo"></div>
-                    <div className="navbar-links">
+                    <button className="menu-toggle" onClick={toggleMenu}>
+                        <FaBars />
+                    </button>
+                    <div className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
                         <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="nav-link">
-                            <FaHome className="nav-icon" /> Home
+                            <FaHome className="nav-icon" /> <span>Home</span>
                         </button>
                         <button onClick={() => scrollToSection('projects')} className="nav-link">
-                            <FaProjectDiagram className="nav-icon" /> Projects
+                            <FaProjectDiagram className="nav-icon" /> <span>Projects</span>
                         </button>
                         <button onClick={() => scrollToSection('about')} className="nav-link">
-                            <FaUser className="nav-icon" /> About
+                            <FaUser className="nav-icon" /> <span>About</span>
                         </button>
                         <button onClick={() => scrollToSection('skills')} className="nav-link">
-                            <FaCode className="nav-icon" /> Skills
+                            <FaCode className="nav-icon" /> <span>Skills</span>
                         </button>
                         <button onClick={() => scrollToSection('contact')} className="nav-link">
-                            <FaAddressBook className="nav-icon" /> Contact
+                            <FaAddressBook className="nav-icon" /> <span>Contact</span>
                         </button>
                     </div>
                 </div>
             </nav>
 
             <section className="hero-section">
-                <div className="hero-content animate-on-load">
+                <div className="hero-content">
                     <div className="profile-image-container">
                         <img src={profileImage} alt="Sarhad Bahrami" className="profile-image" />
-                        <div className="image-border"></div>
                     </div>
 
                     <div className="hero-text">
@@ -160,9 +167,9 @@ function Home() {
                 </div>
             </section>
 
-            <section id="skills" className="section">
-                <h2 className="section-title animate-on-load">My Skills</h2>
-                <ul className="skills-list animate-on-load">
+            <section id="skills" className="section-skills">
+                <h2 className="section-title-skills">My Skills</h2>
+                <ul className="skills-list">
                     {skills.map((skill, index) => (
                         <li key={index} className="skill-item">
                             <div className="skill-icon">{skill.icon}</div>

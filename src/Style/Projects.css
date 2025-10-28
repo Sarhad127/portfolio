@@ -74,3 +74,52 @@
     transform: scale(1.1);
     opacity: 1;
 }
+@media (max-width: 768px) {
+    .section.projects-section {
+        padding: 60px 0;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .project-card {
+        border-radius: 10px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-image {
+        height: 200px;
+        border-radius: 8px;
+    }
+
+    .project-name {
+        font-size: 1.05rem;
+        padding: 12px;
+        flex-direction: column;
+        gap: 6px;
+        text-align: center;
+    }
+
+    .project-icon {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-grid {
+        padding: 0 10px;
+    }
+
+    .project-image {
+        height: 180px;
+    }
+
+    .project-name {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}

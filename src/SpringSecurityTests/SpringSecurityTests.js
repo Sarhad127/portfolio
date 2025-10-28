@@ -1,7 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import {FaGithub, FaHome} from 'react-icons/fa';
-import './SpringSecurityTests.css';
-
 import contentController from '../images/SpringSecurityTests/contentcontroller.png'
 import discountService from '../images/SpringSecurityTests/discountservice.png'
 import palindrome from '../images/SpringSecurityTests/palindrome.png'
