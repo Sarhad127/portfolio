@@ -29,10 +29,6 @@
     transition: all 0.3s ease;
 }
 
-.profile-image:hover {
-    transform: scale(1.05);
-}
-
 .hero-text {
     max-width: 600px;
 }
@@ -87,6 +83,7 @@
 .btn-primary {
     background-color: #2980b9;
     color: white;
+    font-family: Arial, sans-serif;
     transition: transform 0.15s ease;
     box-shadow: 3px 4px 18px rgba(0,0,0,0.1);
 }
@@ -95,6 +92,25 @@
     background-color: #2980b9;
     transform: translateY(-2px);
     box-shadow: 3px 4px 18px rgba(0,0,0,0.1);
+}
+
+.social-links a {
+    display: inline-block;
+    font-size: 2rem;
+    margin-right: 15px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a[href*="linkedin.com"] {
+    color: #0A66C2;
+}
+
+.social-links a[href*="github.com"] {
+    color: #171515;
+}
+
+.social-links a:hover {
+    transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {

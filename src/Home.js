@@ -11,9 +11,9 @@ import {
     SiJavascript,
     SiTypescript,
     SiGithub,
-    SiGit
+    SiGit, SiPostgresql, SiVite, SiTailwindcss, SiPostman
 } from 'react-icons/si';
-import {FaAddressBook, FaCode, FaReact, FaUser} from "react-icons/fa6";
+import {FaAddressBook, FaCode, FaJava, FaReact, FaUser} from "react-icons/fa6";
 import dashboardImage from './images/Pluto/dashboard.png';
 import Clique from './images/Clique/groupchat.png';
 import Discount from './images/SpringSecurityTests/discountservice.png';
@@ -28,6 +28,7 @@ import './Style/Navbar.css'
 import './Style/hero.css'
 import './Style/About.css'
 import './Style/Contact.css'
+import './Style/Modal.css'
 
 function sendEmail(e) {
     e.preventDefault();
@@ -71,6 +72,11 @@ function Home() {
         { name: 'React', icon: <FaReact /> },
         { name: 'Git', icon: <SiGit /> },
         { name: 'GitHub', icon: <SiGithub /> },
+        { name: 'Tailwind', icon: <SiTailwindcss /> },
+        { name: 'Vite', icon: <SiVite /> },
+        { name: 'PostgreSQL', icon: <SiPostgresql /> },
+        { name: 'Java', icon: <FaJava /> },
+        { name: 'Postman', icon: <SiPostman />}
     ];
 
     const projects = [
@@ -97,11 +103,11 @@ function Home() {
                         <button onClick={() => scrollToSection('projects')} className="nav-link">
                             <FaProjectDiagram className="nav-icon" /> <span>Projects</span>
                         </button>
-                        <button onClick={() => scrollToSection('about')} className="nav-link">
-                            <FaUser className="nav-icon" /> <span>About</span>
-                        </button>
                         <button onClick={() => scrollToSection('skills')} className="nav-link">
                             <FaCode className="nav-icon" /> <span>Skills</span>
+                        </button>
+                        <button onClick={() => scrollToSection('about')} className="nav-link">
+                            <FaUser className="nav-icon" /> <span>About</span>
                         </button>
                         <button onClick={() => scrollToSection('contact')} className="nav-link">
                             <FaAddressBook className="nav-icon" /> <span>Contact</span>
@@ -170,15 +176,8 @@ function Home() {
                 </div>
             </section>
 
-            <section id="about" className="about about-section">
-                <h2 className="about-title animate-on-load">About Me</h2>
-                <div className="about-content animate-on-load">
-                  <p>I'm a fullstack software developer with a passion for creating robust backend systems and modern, intuitive frontends. I specialize in Java, Spring Boot, and MySQL for backend development and build dynamic UIs using React, JavaScript, and TypeScript. I enjoy developing fullstack applications, integrating tools like Docker, Git, and GitHub, and continuously exploring new technologies to deliver clean, efficient, and scalable solutions.</p>
-                </div>
-            </section>
-
             <section id="skills" className="section-skills">
-                <h2 className="section-title-skills">My Skills</h2>
+                <h2 className="section-title-skills">Skill Set</h2>
                 <ul className="skills-list">
                     {skills.map((skill, index) => (
                         <li key={index} className="skill-item">
@@ -189,6 +188,13 @@ function Home() {
                         </li>
                     ))}
                 </ul>
+            </section>
+
+            <section id="about" className="about about-section">
+                <h2 className="about-title animate-on-load">About Me</h2>
+                <div className="about-content animate-on-load">
+                  <p>I'm a fullstack software developer with a passion for creating robust backend systems and modern, intuitive frontends. I specialize in Java, Spring Boot, and MySQL for backend development and build dynamic UIs using React, JavaScript, and TypeScript. I enjoy developing fullstack applications, integrating tools like Docker, Git, and GitHub, and continuously exploring new technologies to deliver clean, efficient, and scalable solutions.</p>
+                </div>
             </section>
 
             <section id="contact" className="contact">
