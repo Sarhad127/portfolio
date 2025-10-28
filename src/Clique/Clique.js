@@ -8,8 +8,7 @@ import friends from '../images/Clique/friends.png';
 import chat from '../images/Clique/chat.png';
 import groupChat from '../images/Clique/groupchat.png';
 import background from '../images/Clique/background.png';
-
-
+import '../Style/Apps.css'
 import {useNavigate} from "react-router-dom";
 
 const Clique = () => {
@@ -99,13 +98,13 @@ const Clique = () => {
     ];
 
     return (
-        <div className="pluto-container">
+        <div className="app-container">
 
-            <nav className="pluto-navbar">
-                <div className="navbar-pluto-content">
-                    <div className="navbar-links">
-                        <button onClick={handleBackClick} className="nav-button">
-                            <FaHome className="nav-icon" />
+            <nav className="app-navbar">
+                <div className="navbar-app-content">
+                    <div className="app-navbar-links">
+                        <button onClick={handleBackClick} className="app-nav-button">
+                            <FaHome className="app-nav-icon" />
                             <span>Back to Home</span>
                         </button>
                     </div>
