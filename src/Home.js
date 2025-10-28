@@ -26,6 +26,8 @@ import './Style/Projects.css'
 import './Style/Skills.css'
 import './Style/Navbar.css'
 import './Style/hero.css'
+import './Style/About.css'
+import './Style/Contact.css'
 
 function sendEmail(e) {
     e.preventDefault();
@@ -138,9 +140,9 @@ function Home() {
                 </div>
             </section>
 
-            <section id="projects" className="section projects-section">
-                <h2 className="section-title animate-on-load">Projects</h2>
-                <div className="projects-grid animate-on-load">
+            <section id="projects" className="section-projects-section">
+                <h2 className="section-title-project">Projects</h2>
+                <div className="projects-grid">
                     {projects.map((project, index) => (
                         <div key={index} className="project-card">
                             <div className="project-container">
@@ -160,8 +162,8 @@ function Home() {
                 </div>
             </section>
 
-            <section id="about" className="section about-section">
-                <h2 className="section-title animate-on-load">About Me</h2>
+            <section id="about" className="about about-section">
+                <h2 className="about-title animate-on-load">About Me</h2>
                 <div className="about-content animate-on-load">
                   <p>I'm a fullstack software developer with a passion for creating robust backend systems and modern, intuitive frontends. I specialize in Java, Spring Boot, and MySQL for backend development and build dynamic UIs using React, JavaScript, and TypeScript. I enjoy developing fullstack applications, integrating tools like Docker, Git, and GitHub, and continuously exploring new technologies to deliver clean, efficient, and scalable solutions.</p>
                 </div>
@@ -181,8 +183,8 @@ function Home() {
                 </ul>
             </section>
 
-            <section id="contact" className="section contact-section">
-                <h2 className="section-title animate-on-load">Get In Touch</h2>
+            <section id="contact" className="contact">
+                <h2 className="contact-title animate-on-load">Get In Touch</h2>
                 <form className="contact-form animate-on-load" onSubmit={sendEmail}>
                     <div className="form-group">
                         <input type="text" name="user_name" placeholder="Your Name" required />
@@ -193,7 +195,7 @@ function Home() {
                     <div className="form-group">
                         <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" className="btn btn-primary">Send Message</button>
+                    <button type="submit" className="contact-btn contact-btn-primary">Send Message</button>
                 </form>
             </section>
         </div>
