@@ -22,7 +22,8 @@ import emailjs from '@emailjs/browser';
 import PlutoIcon from './icons/pluto-icon.png';
 import CliqueIcon from './icons/Clique-icon-2.png';
 import TestingIcon from './icons/testing-icon.png';
-
+import './Style/Projects.css'
+import './Style/skills.css'
 function sendEmail(e) {
     e.preventDefault();
 
@@ -159,7 +160,7 @@ function Home() {
                 </div>
             </section>
 
-            <section id="skills" className="section skills-section">
+            <section id="skills" className="section">
                 <h2 className="section-title animate-on-load">My Skills</h2>
                 <ul className="skills-list animate-on-load">
                     {skills.map((skill, index) => (
