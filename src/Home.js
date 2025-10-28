@@ -102,11 +102,11 @@ function Home() {
                         <button onClick={() => scrollToSection('projects')} className="nav-link">
                             <FaProjectDiagram className="nav-icon" /> <span>Projects</span>
                         </button>
-                        <button onClick={() => scrollToSection('about')} className="nav-link">
-                            <FaUser className="nav-icon" /> <span>About</span>
-                        </button>
                         <button onClick={() => scrollToSection('skills')} className="nav-link">
                             <FaCode className="nav-icon" /> <span>Skills</span>
+                        </button>
+                        <button onClick={() => scrollToSection('about')} className="nav-link">
+                            <FaUser className="nav-icon" /> <span>About</span>
                         </button>
                         <button onClick={() => scrollToSection('contact')} className="nav-link">
                             <FaAddressBook className="nav-icon" /> <span>Contact</span>

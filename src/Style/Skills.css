@@ -1,3 +1,7 @@
+.skill-item {
+    cursor: default;
+}
+
 .section-skills {
     background: #f9fafb;
     padding: 80px 0;

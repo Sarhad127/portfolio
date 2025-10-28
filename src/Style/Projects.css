@@ -8,9 +8,9 @@
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
+    gap: 20px;
     margin-top: 30px;
-    padding: 0 20px;
+    padding: 0 30px 50px 30px;
 }
 
 .section-projects {
@@ -40,13 +40,13 @@
 
 .project-card {
     background: rgba(35, 35, 35, 0.37);
-    border-radius: 12px;
+    border-radius: 6px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #e5e7eb;
+    border: 1px solid #e6e6ec;
 }
 
 .project-card:hover {
@@ -58,6 +58,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    cursor: pointer;
 }
 
 .project-image {
@@ -67,11 +68,6 @@
     background-position: center;
     border-radius: 10px;
     transition: transform 0.35s ease, filter 0.35s ease;
-}
-
-.project-card:hover .project-image {
-    transform: scale(1.01);
-    filter: brightness(1.05);
 }
 
 .project-name {
@@ -96,10 +92,6 @@
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.project-card:hover .project-icon {
-    transform: scale(1.1);
-    opacity: 1;
-}
 @media (max-width: 768px) {
     .section.projects-section {
         padding: 60px 0;

@@ -60,6 +60,7 @@
 .contact-btn {
     display: inline-flex;
     align-items: center;
+    font-family: Arial, sans-serif;
     gap: 8px;
     padding: 12px 24px;
     border-radius: 30px;
