@@ -123,9 +123,17 @@ function Home() {
                             A passionate software developer with expertise in both backend and frontend development.
                         </p>
                         <div className="cta-buttons">
-                            <a href="#contact" className="btn btn-primary">
+                            <button
+                                className="btn btn-primary"
+                                onClick={() => {
+                                    const contactSection = document.getElementById('contact');
+                                    if (contactSection) {
+                                        contactSection.scrollIntoView({ behavior: 'smooth' });
+                                    }
+                                }}
+                            >
                                 <FaEnvelope /> Contact Me
-                            </a>
+                            </button>
                         </div>
 
                         <div className="social-links">
