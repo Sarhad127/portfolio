@@ -58,7 +58,8 @@
 }
 
 .contact-btn {
-    display: inline-flex;
+    display: block;
+    margin: 0 auto;
     align-items: center;
     font-family: Arial, sans-serif;
     gap: 8px;
