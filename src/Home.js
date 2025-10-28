@@ -28,6 +28,7 @@ import './Style/Navbar.css'
 import './Style/hero.css'
 import './Style/About.css'
 import './Style/Contact.css'
+import './Style/Modal.css'
 
 function sendEmail(e) {
     e.preventDefault();
