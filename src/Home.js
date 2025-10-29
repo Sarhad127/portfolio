@@ -29,6 +29,7 @@ import './Style/hero.css'
 import './Style/About.css'
 import './Style/Contact.css'
 import './Style/Modal.css'
+import signature from './images/signature.png';
 
 function sendEmail(e) {
     e.preventDefault();
@@ -93,6 +94,7 @@ function Home() {
 
             <nav className="navbar">
                 <div className="navbar-container">
+                    <img src={signature} alt="SB Signature" className="navbar-signature" />
                     <button className="menu-toggle" onClick={toggleMenu}>
                         <FaBars />
                     </button>
@@ -174,6 +176,9 @@ function Home() {
                         </div>
                     ))}
                 </div>
+                <p className="projects-note">
+                    These are hobby projects and not deployed to a service.
+                </p>
             </section>
 
             <section id="skills" className="section-skills">
@@ -193,7 +198,7 @@ function Home() {
             <section id="about" className="about about-section">
                 <h2 className="about-title animate-on-load">About Me</h2>
                 <div className="about-content animate-on-load">
-                  <p>I'm a fullstack software developer with a passion for creating robust backend systems and modern, intuitive frontends. I specialize in Java, Spring Boot, and MySQL for backend development and build dynamic UIs using React, JavaScript, and TypeScript. I enjoy developing fullstack applications, integrating tools like Docker, Git, and GitHub, and continuously exploring new technologies to deliver clean, efficient, and scalable solutions.</p>
+                  <p>I am a fullstack software developer with experience in building reliable backend systems and intuitive frontends. I work primarily with Java, Spring Boot, and MySQL for backend development, and React, JavaScript, and TypeScript for creating dynamic user interfaces. I enjoy developing fullstack applications, integrating tools like Docker, Git, and GitHub, and continuously learning new technologies to create clean, efficient, and maintainable solutions.</p>
                 </div>
             </section>
 

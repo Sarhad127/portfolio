@@ -14,9 +14,15 @@
     margin: 0 auto;
     padding: 10px 0;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
     position: relative;
+}
+
+.navbar-signature {
+    height: 40px;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar-links {
