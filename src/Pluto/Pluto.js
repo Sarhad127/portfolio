@@ -10,6 +10,7 @@ import schema from '../images/Pluto/schema.png';
 import signup from '../images/Pluto/sign up.png';
 import diagram from '../images/Pluto/diagram.png'
 import {useNavigate} from "react-router-dom";
+import signature from "../images/signature.png";
 
 const Pluto = () => {
     const navigate = useNavigate();
@@ -104,6 +105,7 @@ const Pluto = () => {
 
             <nav className="app-navbar">
                 <div className="navbar-app-content">
+                    <img src={signature} alt="SB Signature" className="navbar-signature" />
                     <div className="app-navbar-links">
                     <button onClick={handleBackClick} className="app-nav-button">
                         <FaHome className="app-nav-icon" />

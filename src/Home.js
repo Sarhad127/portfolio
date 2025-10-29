@@ -29,6 +29,7 @@ import './Style/hero.css'
 import './Style/About.css'
 import './Style/Contact.css'
 import './Style/Modal.css'
+import signature from './images/signature.png';
 
 function sendEmail(e) {
     e.preventDefault();
@@ -93,6 +94,7 @@ function Home() {
 
             <nav className="navbar">
                 <div className="navbar-container">
+                    <img src={signature} alt="SB Signature" className="navbar-signature" />
                     <button className="menu-toggle" onClick={toggleMenu}>
                         <FaBars />
                     </button>

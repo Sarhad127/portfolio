@@ -10,6 +10,7 @@ import groupChat from '../images/Clique/groupchat.png';
 import background from '../images/Clique/background.png';
 import '../Style/Apps.css'
 import {useNavigate} from "react-router-dom";
+import signature from "../images/signature.png";
 
 const Clique = () => {
     const navigate = useNavigate();
@@ -102,6 +103,7 @@ const Clique = () => {
 
             <nav className="app-navbar">
                 <div className="navbar-app-content">
+                    <img src={signature} alt="SB Signature" className="navbar-signature" />
                     <div className="app-navbar-links">
                         <button onClick={handleBackClick} className="app-nav-button">
                             <FaHome className="app-nav-icon" />

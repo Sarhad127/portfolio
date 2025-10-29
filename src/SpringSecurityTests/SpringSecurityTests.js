@@ -6,6 +6,7 @@ import palindrome from '../images/SpringSecurityTests/palindrome.png'
 import registrationController from '../images/SpringSecurityTests/registrationcontroller.png'
 import {useNavigate} from "react-router-dom";
 import '../Style/Apps.css'
+import signature from "../images/signature.png";
 
 const SpringSecurityTests = () => {
     const navigate = useNavigate();
@@ -78,6 +79,7 @@ const SpringSecurityTests = () => {
 
             <nav className="app-navbar">
                 <div className="navbar-app-content">
+                    <img src={signature} alt="SB Signature" className="navbar-signature" />
                     <div className="app-navbar-links">
                     <button onClick={handleBackClick} className="app-nav-button">
                         <FaHome className="app-nav-icon" />
