@@ -30,6 +30,8 @@ import './Style/About.css'
 import './Style/Contact.css'
 import './Style/Modal.css'
 import signature from './images/signature.png';
+import budget from './images/Budget/Budgetkalkylen.png'
+import movie from './images/Movies/Movies.png'
 
 function sendEmail(e) {
     e.preventDefault();
@@ -84,6 +86,8 @@ function Home() {
         { name: 'Pluto', image: dashboardImage, link: '/pluto', icon: PlutoIcon },
         { name: 'Clique', image: Clique, link: '/Clique', icon: CliqueIcon },
         { name: 'Discount Service', image: Discount, link: '/SpringSecurityTests', icon: TestingIcon },
+        { name: 'Budget', image: budget, link: '/Budget', icon: TestingIcon},
+        { name: 'Movies', image: movie, link: '/Movies', icon: TestingIcon}
     ];
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
