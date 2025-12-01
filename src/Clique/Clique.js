@@ -116,8 +116,14 @@ const Clique = () => {
             <section className="project-description">
                 <h2>Clique</h2>
                 <p>
-                    Clique is a full-featured chat application that uses WebSockets for real-time communication, enabling users to sign up, log in, add friends, and start one-on-one or group conversations with instant message updates.
+                    Clique is a full-featured chat app using WebSockets for real-time messaging. Users can sign up, log in, add friends, and start one-on-one or group conversations with instant updates.
                 </p>
+                <ul>
+                    <li><strong>Frontend:</strong> React</li>
+                    <li><strong>Backend:</strong> Spring Boot</li>
+                    <li><strong>Database:</strong> MySQL</li>
+                    <li><strong>Real-time:</strong> WebSockets</li>
+                </ul>
             </section>
 
             <section className="repo-links">

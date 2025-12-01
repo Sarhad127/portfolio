@@ -16,12 +16,10 @@ import {
 import {FaAddressBook, FaCode, FaJava, FaReact, FaUser} from "react-icons/fa6";
 import dashboardImage from './images/Pluto/dashboard.png';
 import Clique from './images/Clique/groupchat.png';
-import Discount from './images/SpringSecurityTests/discountservice.png';
 import {Link} from "react-router-dom";
 import emailjs from '@emailjs/browser';
 import PlutoIcon from './icons/pluto-icon.png';
 import CliqueIcon from './icons/Clique-icon-2.png';
-import TestingIcon from './icons/testing-icon.png';
 import './Style/Projects.css'
 import './Style/Skills.css'
 import './Style/Navbar.css'
@@ -30,8 +28,6 @@ import './Style/About.css'
 import './Style/Contact.css'
 import './Style/Modal.css'
 import signature from './images/signature.png';
-import budget from './images/Budget/Budgetkalkylen.png'
-import movie from './images/Movies/Movies.png'
 
 function sendEmail(e) {
     e.preventDefault();
@@ -85,9 +81,6 @@ function Home() {
     const projects = [
         { name: 'Pluto', image: dashboardImage, link: '/pluto', icon: PlutoIcon },
         { name: 'Clique', image: Clique, link: '/Clique', icon: CliqueIcon },
-        { name: 'Discount Service', image: Discount, link: '/SpringSecurityTests', icon: TestingIcon },
-        { name: 'Budget', image: budget, link: '/Budget', icon: TestingIcon},
-        { name: 'Movies', image: movie, link: '/Movies', icon: TestingIcon}
     ];
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
