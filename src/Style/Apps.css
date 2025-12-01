@@ -59,22 +59,44 @@
 
 .project-description {
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
     margin-top: 80px;
+    background-color: #f9fafb;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .project-description h2 {
-    color: #1f2937;
+    color: #111827;
     margin-bottom: 1rem;
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 2.25rem;
+    font-weight: 700;
 }
 
 .project-description p {
     color: #4b5563;
-    max-width: 800px;
+    max-width: 700px;
+    margin: 0 auto 1.5rem auto;
+    line-height: 1.75;
+    font-size: 1.125rem;
+}
+
+.project-description ul {
+    list-style: none;
+    padding: 0;
     margin: 0 auto;
-    line-height: 1.6;
+    display: inline-block;
+    text-align: left;
+}
+
+.project-description ul li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #374151;
+}
+
+.project-description ul li strong {
+    color: #111827;
 }
 
 .repo-links {
