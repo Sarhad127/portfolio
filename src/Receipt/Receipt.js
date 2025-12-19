@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {FaGithub, FaHome} from 'react-icons/fa';
+import { FaHome} from 'react-icons/fa';
 import '../Style/Apps.css'
 import {useNavigate} from "react-router-dom";
 import signature from "../images/signature.png";
