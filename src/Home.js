@@ -16,10 +16,12 @@ import {
 import {FaAddressBook, FaCode, FaJava, FaReact, FaUser} from "react-icons/fa6";
 import dashboardImage from './images/Pluto/dashboard.png';
 import Clique from './images/Clique/groupchat.png';
+import Receipt from './images/Receipt/test.png'
 import {Link} from "react-router-dom";
 import emailjs from '@emailjs/browser';
 import PlutoIcon from './icons/pluto-icon.png';
 import CliqueIcon from './icons/Clique-icon-2.png';
+import ReceiptIcon from './icons/receipt-icon.png';
 import './Style/Projects.css'
 import './Style/Skills.css'
 import './Style/Navbar.css'
@@ -81,6 +83,7 @@ function Home() {
     const projects = [
         { name: 'Pluto', image: dashboardImage, link: '/pluto', icon: PlutoIcon },
         { name: 'Clique', image: Clique, link: '/Clique', icon: CliqueIcon },
+        { name: 'Receipt {In Progress}', image: Receipt, link: '/Receipt', icon: ReceiptIcon },
     ];
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
