@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { FaHome} from 'react-icons/fa';
+import {FaGithub, FaHome} from 'react-icons/fa';
 import login from '../images/Clique/login.png';
 import signup from '../images/Clique/register.png';
 import home from '../images/Clique/home.png';
