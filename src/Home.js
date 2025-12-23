@@ -83,7 +83,7 @@ function Home() {
     const projects = [
         { name: 'Pluto', image: dashboardImage, link: '/pluto', icon: PlutoIcon },
         { name: 'Clique', image: Clique, link: '/Clique', icon: CliqueIcon },
-        { name: 'Receipt {In Progress}', image: Receipt, link: '/Receipt', icon: ReceiptIcon },
+        { name: 'Huskvitton {In Development}', image: Receipt, link: '/Receipt', icon: ReceiptIcon },
     ];
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -126,7 +126,7 @@ function Home() {
 
                     <div className="hero-text">
                         <h1 className="greeting"><span className="highlight">Sarhad Bahrami</span></h1>
-                        <h2 className="title">Full Stack Developer from Nackademin.</h2>
+                        <h2 className="title">Junior Full Stack Developer</h2>
                         <p className="summary">
                             A passionate software developer with expertise in both backend and frontend development.
                         </p>
@@ -176,9 +176,6 @@ function Home() {
                         </div>
                     ))}
                 </div>
-                <p className="projects-note">
-                    These are hobby projects and not deployed to a service.
-                </p>
             </section>
 
             <section id="skills" className="section-skills">
