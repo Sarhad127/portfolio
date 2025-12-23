@@ -92,14 +92,6 @@
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.projects-note {
-    text-align: center;
-    font-size: 0.9rem;
-    color: rgba(0, 0, 0, 0.6);
-    margin-top: 15px;
-    font-style: italic;
-}
-
 @media (max-width: 768px) {
     .section.projects-section {
         padding: 60px 0;
