@@ -157,24 +157,26 @@ function Home() {
             </section>
 
             <section id="projects" className="section-projects-section">
-                <h2 className="section-title-project">Projects</h2>
-                <div className="projects-grid">
-                    {projects.map((project, index) => (
-                        <div key={index} className="project-card">
-                            <div className="project-container">
-                                <h3 className="project-name">
-                                    <img src={project.icon} alt={`${project.name} icon`} className="project-icon" />
-                                    {project.name}
-                                </h3>
-                                <Link to={project.link}>
-                                    <div
-                                        className="project-image"
-                                        style={{ backgroundImage: `url(${project.image})` }}
-                                    ></div>
-                                </Link>
+                <div className="projects-wrapper">
+                    <h2 className="section-title-project">Projects</h2>
+                    <div className="projects-grid">
+                        {projects.map((project, index) => (
+                            <div key={index} className="project-card">
+                                <div className="project-container">
+                                    <h3 className="project-name">
+                                        <img src={project.icon} alt="" className="project-icon" />
+                                        {project.name}
+                                    </h3>
+                                    <Link to={project.link}>
+                                        <div
+                                            className="project-image"
+                                            style={{ backgroundImage: `url(${project.image})` }}
+                                        />
+                                    </Link>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </section>
 
@@ -192,10 +194,18 @@ function Home() {
                 </ul>
             </section>
 
-            <section id="about" className="about about-section">
-                <h2 className="about-title animate-on-load">About Me</h2>
-                <div className="about-content animate-on-load">
-                  <p>I am a fullstack software developer with experience in building reliable backend systems and intuitive frontends. I work primarily with Java, Spring Boot, and MySQL for backend development, and React, JavaScript, and TypeScript for creating dynamic user interfaces. I enjoy developing fullstack applications, integrating tools like Docker, Git, and GitHub, and continuously learning new technologies to create clean, efficient, and maintainable solutions.</p>
+            <section id="about" className="about">
+                <div className="about-wrapper">
+                    <h2 className="about-title animate-on-load">About Me</h2>
+
+                    <div className="about-content animate-on-load">
+                        <p>
+                            I am a fullstack software developer with experience in building reliable backend systems and intuitive frontends.
+                            I work primarily with Java, Spring Boot, and MySQL for backend development, and React, JavaScript, and TypeScript
+                            for creating dynamic user interfaces. I enjoy developing fullstack applications, integrating tools like Docker,
+                            Git, and GitHub, and continuously learning new technologies to create clean, efficient, and maintainable solutions.
+                        </p>
+                    </div>
                 </div>
             </section>
 
