@@ -22,3 +22,11 @@
     background-color: rgba(2, 110, 225, 0.82);
     border-radius: 2px;
 }
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.7;
+    color: #333;
+}
