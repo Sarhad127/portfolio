@@ -3,7 +3,13 @@ import { FaHome} from 'react-icons/fa';
 import '../Style/Apps.css'
 import {useNavigate} from "react-router-dom";
 import signature from "../images/signature.png";
-import receipt from "../images/Receipt/test.png"
+import receipt from "../images/Receipt/kvitto-login.png"
+import receipt2 from "../images/Receipt/kvitto-scan.png"
+import receipt3 from "../images/Receipt/kvitto-scan-2.png"
+import receipt4 from "../images/Receipt/kvitto-historik.png"
+import receipt5 from "../images/Receipt/kvitto-filter.png"
+import receipt6 from "../images/Receipt/kvitto-statistik.png"
+import receipt7 from "../images/Receipt/kvitto-saved.png"
 
 const Receipt = () => {
     const navigate = useNavigate();
@@ -44,8 +50,44 @@ const Receipt = () => {
         {
             src: receipt,
             alt: 'Receipt',
-            caption: 'Receipt',
-            description: 'Simple home page that allows a user to upload an image for a Python model to scan.'
+            caption: 'Login',
+            description: 'Login page with registration that validates via email.'
+        },
+        {
+            src: receipt2,
+            alt: 'Receipt 2',
+            caption: 'Scanning page',
+            description: 'Page where the user can upload a receipt image for scanning.'
+        },
+        {
+            src: receipt3,
+            alt: 'Receipt 3',
+            caption: 'Scanned',
+            description: 'Scanned information is displayed. The user can view raw OCR data using the toggle switch.'
+        },
+        {
+            src: receipt4,
+            alt: 'Receipt 4',
+            caption: 'History',
+            description: 'History of scanned receipts. A green dot is shown for receipts that the user has saved.'
+        },
+        {
+            src: receipt5,
+            alt: 'Receipt 5',
+            caption: 'History / Saved receipts',
+            description: 'Advanced filtering and a layout toggle between grid and list views.'
+        },
+        {
+            src: receipt7,
+            alt: 'Receipt 7',
+            caption: 'Saved receipts',
+            description: 'Saved receipts. Selecting a receipt enables fully editable receipt information.'
+        },
+        {
+            src: receipt6,
+            alt: 'Receipt 6',
+            caption: 'Statistics',
+            description: 'Statistics page that calculates data from all saved receipts (not from history).'
         },
     ];
 
@@ -65,9 +107,9 @@ const Receipt = () => {
             </nav>
 
             <section className="project-description">
-                <h2>Receipt</h2>
+                <h2>Huskvitton</h2>
                 <p>
-                    Receipts is a full-featured receipt management app using OCR to extract text from uploaded receipts. Users can sign up, log in, upload receipt images, view scanned information in list or raw format, and track their history and saved receipts with quick access to both text and images.
+                    Huskvitton is a full-featured receipt management app using OCR to extract text from uploaded receipts. Users can sign up, log in, upload receipt images, view scanned information in list or raw format, and track their history and saved receipts with quick access to both text and images.
                 </p>
                 <ul>
                     <li><strong>Frontend:</strong> React & React Native</li>
