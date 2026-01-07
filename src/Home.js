@@ -16,7 +16,7 @@ import {
 import {FaAddressBook, FaCode, FaJava, FaReact, FaUser} from "react-icons/fa6";
 import dashboardImage from './images/Pluto/dashboard.png';
 import Clique from './images/Clique/groupchat.png';
-import Receipt from './images/Receipt/test.png'
+import Receipt from './images/Receipt/kvitto-saved.png'
 import {Link} from "react-router-dom";
 import emailjs from '@emailjs/browser';
 import PlutoIcon from './icons/pluto-icon.png';
