@@ -6,8 +6,7 @@ import signature from "../images/signature.png";
 import receipt from "../images/Receipt/kvitto-login.png"
 import receipt2 from "../images/Receipt/kvitto-scan.png"
 import receipt3 from "../images/Receipt/kvitto-scan-2.png"
-import receipt4 from "../images/Receipt/kvitto-historik.png"
-import receipt5 from "../images/Receipt/kvitto-filter.png"
+import receipt4 from "../images/Receipt/kvitto-edit.png"
 import receipt6 from "../images/Receipt/kvitto-statistik.png"
 import receipt7 from "../images/Receipt/kvitto-saved.png"
 
@@ -51,7 +50,7 @@ const Receipt = () => {
             src: receipt,
             alt: 'Receipt',
             caption: 'Login',
-            description: 'Login page with registration that validates via email.'
+            description: 'Login page with email-based registration and verification code validation.'
         },
         {
             src: receipt2,
@@ -63,25 +62,19 @@ const Receipt = () => {
             src: receipt3,
             alt: 'Receipt 3',
             caption: 'Scanned',
-            description: 'Scanned information is displayed. The user can view raw OCR data using the toggle switch.'
-        },
-        {
-            src: receipt4,
-            alt: 'Receipt 4',
-            caption: 'History',
-            description: 'History of scanned receipts. A green dot is shown for receipts that the user has saved.'
-        },
-        {
-            src: receipt5,
-            alt: 'Receipt 5',
-            caption: 'History / Saved receipts',
-            description: 'Advanced filtering and a layout toggle between grid and list views.'
+            description: 'Scanned information is displayed. The user can view raw OCR data using the toggle switch and able to modify the tables scanned.'
         },
         {
             src: receipt7,
             alt: 'Receipt 7',
             caption: 'Saved receipts',
-            description: 'Saved receipts. Selecting a receipt enables fully editable receipt information.'
+            description: 'All saved receipts are displayed in a list or grid layout with multiple size options. Powerful filters allow you to quickly find specific receipts. Selecting a receipt enables full editing of all receipt details.'
+        },
+        {
+            src: receipt4,
+            alt: 'Receipt 4',
+            caption: 'Editable receipts',
+            description: 'Saved receipts can be modified. The user can view raw OCR data using the toggle switch and able to modify the tables scanned.'
         },
         {
             src: receipt6,
