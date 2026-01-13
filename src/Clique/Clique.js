@@ -141,8 +141,24 @@ const Clique = () => {
                 {images.map((image, index) => (
                     <div key={index} className="gallery-item" onClick={() => openModal(index)}>
                         <div className="image-container">
-                            <img src={image.src} alt={image.alt} className="gallery-image" />
+                            <img
+                                src={image.src}
+                                alt={image.alt}
+                                className="gallery-image"
+                            />
+
+                            <button
+                                className="expand-button"
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    openModal(index);
+                                }}
+                                aria-label="Enlarge image"
+                            >
+                                ⤢
+                            </button>
                         </div>
+
                         <div className="image-text">
                             <h3>{image.caption}</h3>
                             <p>{image.description}</p>
@@ -153,15 +169,17 @@ const Clique = () => {
 
             {selectedImageIndex !== null && (
                 <div className="modal-overlay" onClick={closeModal}>
-                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                    <div className="modal-content image-only" onClick={(e) => e.stopPropagation()}>
                         <button className="modal-close" onClick={closeModal}>
                             &times;
                         </button>
+
                         <div className="modal-image-container">
                             <img
                                 src={images[selectedImageIndex].src}
                                 alt={images[selectedImageIndex].alt}
                             />
+
                             <div className="hover-zone left-zone">
                                 <button
                                     className="modal-nav-button prev-button"
@@ -171,6 +189,7 @@ const Clique = () => {
                                     &#10094;
                                 </button>
                             </div>
+
                             <div className="hover-zone right-zone">
                                 <button
                                     className="modal-nav-button next-button"
@@ -180,10 +199,6 @@ const Clique = () => {
                                     &#10095;
                                 </button>
                             </div>
-                        </div>
-                        <div className="modal-text-content">
-                            <h3>{images[selectedImageIndex].caption}</h3>
-                            <p>{images[selectedImageIndex].description}</p>
                         </div>
                     </div>
                 </div>

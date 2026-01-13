@@ -13,143 +13,143 @@
 .modal-content {
     width: 95vw;
     max-width: 2000px;
-    height: 85vh;
-    background-color: #fff;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
-}
-
-.modal-image-container {
-    flex: 2;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    background-color: #f3f4f6;
+    background: transparent;
+    box-shadow: none;
+}
+
+.modal-image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .modal-image-container img {
-    max-width: 100%;
-    max-height: 85vh;
+    max-width: 95vw;
+    max-height: 90vh;
     width: auto;
     height: auto;
     object-fit: contain;
-    border-radius: 8px;
-}
-
-.modal-text-content {
-    flex: 1;
-    padding: 1.5rem;
-    overflow-y: auto;
-    background-color: #fff;
-}
-
-.modal-text-content h3 {
-    color: #1f2937;
-    margin-bottom: 0.8rem;
-    font-size: 1.5rem;
-}
-
-.modal-text-content p {
-    color: #4b5563;
-    line-height: 1.6;
-    font-size: 1rem;
+    border-radius: 2px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    background: #fff;
 }
 
 .modal-close {
     position: absolute;
-    top: 12px;
-    right: 12px;
+    top: -40px;
+    right: 0;
     background: none;
     border: none;
-    font-size: 2rem;
-    color: #6b7280;
+    font-size: 2.5rem;
+    color: white;
     cursor: pointer;
-    transition: color 0.2s ease;
+    z-index: 20;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .modal-close:hover {
-    color: #e11d48;
+    color: #ef4444;
+    transform: scale(1.1);
 }
 
 .hover-zone {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 60px;
+    width: 80px;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    z-index: 10;
+    z-index: 15;
 }
 
-.left-zone { left: 10px; }
-.right-zone { right: 10px; }
+.left-zone {
+    left: 0;
+    padding-left: 16px;
+}
+
+.right-zone {
+    right: 0;
+    padding-right: 16px;
+}
 
 .modal-nav-button {
-    background-color: rgba(0, 0, 0, 0.4);
+    width: 52px;
+    height: 52px;
+    background: rgba(15, 15, 15, 0.6);
     border: none;
-    color: #fff;
-    font-size: 2rem;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    opacity: 0.7;
-    pointer-events: auto;
-    transition: all 0.3s ease;
+    color: white;
+    font-size: 2.2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.85);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.45);
+    transition:
+            opacity 0.25s ease,
+            transform 0.25s ease,
+            background 0.25s ease;
 }
 
-.hover-zone:hover .modal-nav-button { opacity: 1; }
-.modal-nav-button:hover { background-color: rgba(0, 0, 0, 0.6); }
+.modal-image-container:hover .modal-nav-button {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.modal-nav-button:hover {
+    background: rgba(0, 0, 0, 0.85);
+    transform: scale(1.1);
+}
 
 @media (max-width: 768px) {
-    .modal-content {
-        flex-direction: column;
-        height: 90vh;
+    .modal-nav-button {
+        opacity: 1;
+        transform: scale(1);
     }
-
-    .modal-image-container {
-        max-height: 55%;
-    }
-
-    .modal-text-content {
-        max-height: 45%;
-        padding: 1rem;
-    }
-
-    .modal-text-content h3 { font-size: 1.3rem; }
-    .modal-text-content p { font-size: 0.95rem; }
 }
 
-@media (max-width: 480px) {
-    .modal-content {
-        height: 95vh;
-        width: 95vw;
-        border-radius: 8px;
-    }
-
-    .modal-image-container {
-        max-height: 50%;
-    }
-
-    .modal-text-content {
-        max-height: 45%;
-        padding: 0.8rem;
-    }
-
-    .modal-text-content h3 { font-size: 1.2rem; }
-    .modal-text-content p { font-size: 0.9rem; }
-
-    .hover-zone {
-        width: 40px;
+@media (max-width: 768px) {
+    .modal-close {
+        top: -35px;
+        font-size: 2.2rem;
     }
 
     .modal-nav-button {
-        font-size: 1.5rem;
+        font-size: 2rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .hover-zone {
+        width: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-image-container img {
+        max-width: 100vw;
+        max-height: 85vh;
+        border-radius: 8px;
+    }
+
+    .modal-close {
+        top: -30px;
+        font-size: 2rem;
+    }
+
+    .modal-nav-button {
+        font-size: 1.8rem;
         padding: 0.4rem 0.8rem;
     }
 }
