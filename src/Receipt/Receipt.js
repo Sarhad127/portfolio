@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { FaHome} from 'react-icons/fa';
+import {FaGithub, FaHome} from 'react-icons/fa';
 import '../Style/Apps.css'
 import {useNavigate} from "react-router-dom";
 import signature from "../images/signature.png";
@@ -112,16 +112,20 @@ const Receipt = () => {
                 </ul>
             </section>
 
-            {/*<section className="repo-links">*/}
-            {/*    <a href="https://github.com/Sarhad127/Clique-Frontend" target="_blank" rel="noopener noreferrer" className="repo-link">*/}
-            {/*        <FaGithub size={24} />*/}
-            {/*        <span>Frontend Repo</span>*/}
-            {/*    </a>*/}
-            {/*    <a href="https://github.com/Sarhad127/Clique-Backend" target="_blank" rel="noopener noreferrer" className="repo-link">*/}
-            {/*        <FaGithub size={24} />*/}
-            {/*        <span>Backend Repo</span>*/}
-            {/*    </a>*/}
-            {/*</section>*/}
+            <section className="repo-links">
+                <a href="https://github.com/Sarhad127/receipt-frontend-react" target="_blank" rel="noopener noreferrer" className="repo-link">
+                    <FaGithub size={24} />
+                    <span>Frontend Repo</span>
+                </a>
+                <a href="https://github.com/Sarhad127/receipt-backend-java" target="_blank" rel="noopener noreferrer" className="repo-link">
+                    <FaGithub size={24} />
+                    <span>Java Backend Repo</span>
+                </a>
+                <a href="https://github.com/Sarhad127/receipt-backend-python" target="_blank" rel="noopener noreferrer" className="repo-link">
+                    <FaGithub size={24} />
+                    <span>Python Backend Repo</span>
+                </a>
+            </section>
 
             <div className="image-gallery">
                 {images.map((image, index) => (
