@@ -20,7 +20,7 @@
 .navbar-app-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 10px 0;
+    padding: 10px 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -138,7 +138,10 @@
     position: relative;
     flex: 0 0 40%;
     aspect-ratio: 16 / 9;
-    overflow: hidden;
+}
+
+.image-container:hover .expand-button {
+    opacity: 1;
 }
 
 .expand-button {
@@ -162,10 +165,6 @@
     transition: all 0.2s ease;
 }
 
-.image-container:hover .expand-button {
-    opacity: 1;
-}
-
 .expand-button:hover {
     background: rgba(0, 0, 0, 0.9);
 }
@@ -175,7 +174,6 @@
     gap: 2rem;
     align-items: center;
     border-radius: 10px;
-    overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     background-color: #fff;
     padding: 1.5rem;
@@ -185,11 +183,6 @@
 .gallery-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
-}
-
-.image-container {
-    flex: 0 0 40%;
-    aspect-ratio: 16 / 9;
 }
 
 .gallery-image {
@@ -219,9 +212,18 @@
         flex-direction: column;
         text-align: center;
     }
+
+    .navbar-app-content{
+        padding: 5px 10px;
+    }
 }
 
 @media (max-width: 480px) {
+
+    .navbar-app-content{
+        padding: 0 10px;
+    }
+
     .project-description h2 {
         font-size: 1.4rem;
     }

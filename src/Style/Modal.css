@@ -14,7 +14,7 @@
     width: 95vw;
     max-width: 2000px;
     height: 90vh;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     position: relative;
