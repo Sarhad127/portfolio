@@ -169,11 +169,10 @@ const Clique = () => {
 
             {selectedImageIndex !== null && (
                 <div className="modal-overlay" onClick={closeModal}>
-                    <div className="modal-content image-only" onClick={(e) => e.stopPropagation()}>
-                        <button className="modal-close" onClick={closeModal}>
-                            &times;
-                        </button>
-
+                    <div
+                        className="modal-content image-only"
+                        onClick={(e) => e.stopPropagation()}
+                    >
                         <div className="modal-image-container">
                             <img
                                 src={images[selectedImageIndex].src}
@@ -183,8 +182,10 @@ const Clique = () => {
                             <div className="hover-zone left-zone">
                                 <button
                                     className="modal-nav-button prev-button"
-                                    onClick={prevImage}
-                                    aria-label="Previous Image"
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        prevImage();
+                                    }}
                                 >
                                     &#10094;
                                 </button>
@@ -193,8 +194,10 @@ const Clique = () => {
                             <div className="hover-zone right-zone">
                                 <button
                                     className="modal-nav-button next-button"
-                                    onClick={nextImage}
-                                    aria-label="Next Image"
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        nextImage();
+                                    }}
                                 >
                                     &#10095;
                                 </button>
