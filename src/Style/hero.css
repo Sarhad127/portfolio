@@ -9,8 +9,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    gap: 40px;
     width: 100%;
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+
+.hero-text {
+    max-width: 500px;
+    flex: 1 1 auto;
 }
 
 .profile-image-container {
@@ -28,10 +35,6 @@
     position: relative;
     z-index: 2;
     transition: all 0.3s ease;
-}
-
-.hero-text {
-    max-width: 600px;
 }
 
 .greeting {
