@@ -232,14 +232,24 @@
         font-size: 0.9rem;
     }
 
+    .repo-links {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
     .repo-link {
-        padding: 0.5rem 1rem;
+        width: 90%;
+        text-align: center;
+        padding: 0.6rem 1rem;
         font-size: 0.9rem;
     }
 
     .gallery-item {
         gap: 1rem;
         padding: 1rem;
+        flex-direction: column;
+        text-align: center;
     }
 
     .image-text h3 {
