@@ -16,7 +16,7 @@ import {
 import {FaAddressBook, FaCode, FaJava, FaReact, FaUser} from "react-icons/fa6";
 import dashboardImage from './images/Pluto/dashboard.png';
 import Clique from './images/Clique/groupchat.png';
-import Receipt from './images/Receipt/kvitto-saved.png'
+import Receipt from './images/Receipt/kvitto-scan-2.png'
 import {Link} from "react-router-dom";
 import emailjs from '@emailjs/browser';
 import PlutoIcon from './icons/pluto-icon.png';
@@ -159,6 +159,9 @@ function Home() {
             <section id="projects" className="section-projects-section">
                 <div className="projects-wrapper">
                     <h2 className="section-title-project">Projects</h2>
+                    <p className="projects-note">
+                        Personal projects developed to practice and refine my technical skills.
+                    </p>
                     <div className="projects-grid">
                         {projects.map((project, index) => (
                             <div key={index} className="project-card">
