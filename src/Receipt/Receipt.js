@@ -9,6 +9,7 @@ import receipt3 from "../images/Receipt/kvitto-scan-2.png"
 import receipt4 from "../images/Receipt/kvitto-edit.png"
 import receipt6 from "../images/Receipt/kvitto-statistik.png"
 import receipt7 from "../images/Receipt/kvitto-saved.png"
+import receipt8 from "../images/Receipt/kvitto-history.png"
 
 const Receipt = () => {
     const navigate = useNavigate();
@@ -71,16 +72,22 @@ const Receipt = () => {
             description: 'All saved receipts are displayed in a list or grid layout with multiple size options. Powerful filters allow you to quickly find specific receipts. Selecting a receipt enables full editing of all receipt details.'
         },
         {
+            src: receipt8,
+            alt: 'Receipt 8',
+            caption: 'History receipts',
+            description: 'All receipts get placed in history and saving a receipt from history marks the green dot. User can remove, scan again and save receipts from history without affecting the saved ones.'
+        },
+        {
             src: receipt4,
             alt: 'Receipt 4',
             caption: 'Editable receipts',
-            description: 'Saved receipts can be modified. The user can view raw OCR data using the toggle switch and able to modify the tables scanned.'
+            description: '(User dark themed) Saved receipts can be modified. The user can view raw OCR data using the toggle switch and able to modify the tables scanned.'
         },
         {
             src: receipt6,
             alt: 'Receipt 6',
             caption: 'Statistics',
-            description: 'Statistics page that calculates data from all saved receipts (not from history).'
+            description: '(User dark themed) Statistics page that calculates data from all saved receipts (not from history).'
         },
     ];
 
