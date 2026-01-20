@@ -39,7 +39,7 @@
 
 .greeting {
     font-size: 2.8rem;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     color: var(--dark-color);
 }
 
@@ -47,9 +47,12 @@
     color: #424242;
 }
 
+.title-section{
+    margin-bottom: 10px;
+}
+
 .title {
     font-size: 1.8rem;
-    margin-bottom: 20px;
     font-weight: 400;
     background: linear-gradient(to right, #1f1f23, #4a3b52, #4b444b, #595459);
     -webkit-background-clip: text;
@@ -58,10 +61,15 @@
     text-fill-color: transparent;
 }
 
+.title-2{
+    color: var(--text-color);
+}
+
 .summary {
     font-family: Cambria, sans-serif;
     font-size: 1.2rem;
     margin-bottom: 30px;
+    line-height: 1.4;
     color: var(--text-color);
 }
 

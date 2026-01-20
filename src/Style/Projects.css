@@ -104,6 +104,13 @@
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+.project-description-home{
+    text-align: center;
+    padding: 1rem 1rem;
+    font-size: 1rem;
+    background-color: #f9fafb;
+}
+
 @media (max-width: 768px) {
     .section.projects-section {
         padding: 60px 0;

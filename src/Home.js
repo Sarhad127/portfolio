@@ -81,9 +81,27 @@ function Home() {
     ];
 
     const projects = [
-        { name: 'Pluto', image: dashboardImage, link: '/pluto', icon: PlutoIcon },
-        { name: 'Clique', image: Clique, link: '/Clique', icon: CliqueIcon },
-        { name: 'Huskvitton {In Development}', image: Receipt, link: '/Receipt', icon: ReceiptIcon },
+        {
+            name: "Pluto",
+            image: dashboardImage,
+            link: "/pluto",
+            icon: PlutoIcon,
+            description: "Trello-like task manager with authentication and real-time features."
+        },
+        {
+            name: "Clique",
+            image: Clique,
+            link: "/Clique",
+            icon: CliqueIcon,
+            description: "Real-time chat application inspired by Discord using WebSockets."
+        },
+        {
+            name: "Huskvitton (In Development)",
+            image: Receipt,
+            link: "/Receipt",
+            icon: ReceiptIcon,
+            description: "A fullstack receipt-scanning system with OCR, a Java backend, and a Python microservice."
+        }
     ];
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -126,9 +144,14 @@ function Home() {
 
                     <div className="hero-text">
                         <h1 className="greeting"><span className="highlight">Sarhad Bahrami</span></h1>
-                        <h2 className="title">Junior Full Stack Developer</h2>
+                        <div className="title-section">
+                            <h2 className="title">Junior Java & Fullstack Developer</h2>
+                            <p className="title-2">
+                                Java | Spring Boot | React | Docker | REST | JWT
+                            </p>
+                        </div>
                         <p className="summary">
-                            A passionate software developer with expertise in both backend and frontend development.
+                            I build fullstack applications with a strong focus on backend quality, clear APIs, and maintainable code.
                         </p>
                         <div className="cta-buttons">
                             <button
@@ -176,6 +199,9 @@ function Home() {
                                             style={{ backgroundImage: `url(${project.image})` }}
                                         />
                                     </Link>
+                                    <p className="project-description-home">
+                                        {project.description}
+                                    </p>
                                 </div>
                             </div>
                         ))}
