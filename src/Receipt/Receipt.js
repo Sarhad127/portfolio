@@ -87,7 +87,7 @@ const Receipt = () => {
             src: receipt6,
             alt: 'Receipt 6',
             caption: 'Statistics',
-            description: '(User dark themed) Statistics page that calculates data from all saved receipts (not from history).'
+            description: 'Statistics page that calculates data from all saved receipts (not from history).'
         },
     ];
 
@@ -109,13 +109,13 @@ const Receipt = () => {
             <section className="project-description">
                 <h2>Huskvitton</h2>
                 <p>
-                    Huskvitton is a full-featured receipt management app using OCR to extract text from uploaded receipts. Users can sign up, log in, upload receipt images, view scanned information in list or raw format, and track their history and saved receipts with quick access to both text and images.
+                    Huskvitton lets users upload receipts, automatically extract text with OCR, and easily view and track saved receipts and history.
                 </p>
                 <ul>
-                    <li><strong>Frontend:</strong> React & React Native</li>
+                    <li><strong>Frontend:</strong> React</li>
                     <li><strong>Backend:</strong> Spring Boot</li>
                     <li><strong>Microservice:</strong> Python</li>
-                    <li><strong>Database & Cloud Storage:</strong> MySQL & Firebase</li>
+                    <li><strong>Database:</strong> MySQL</li>
                 </ul>
             </section>
 

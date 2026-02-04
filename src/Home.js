@@ -86,21 +86,21 @@ function Home() {
             image: dashboardImage,
             link: "/pluto",
             icon: PlutoIcon,
-            description: "Trello-like task manager with authentication and real-time features."
+            description: "Task manager with authentication and multiple features."
         },
         {
             name: "Clique",
             image: Clique,
             link: "/Clique",
             icon: CliqueIcon,
-            description: "Real-time chat application inspired by Discord using WebSockets."
+            description: "Chat application inspired by Discord using WebSockets."
         },
         {
-            name: "Huskvitton (In Development)",
+            name: "Huskvitton",
             image: Receipt,
             link: "/Receipt",
             icon: ReceiptIcon,
-            description: "A fullstack receipt-scanning system with OCR, a Java backend, and a Python microservice."
+            description: "A receipt scanning system using Python as a microservice."
         }
     ];
 
