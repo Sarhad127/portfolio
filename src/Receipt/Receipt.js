@@ -93,6 +93,7 @@ const Receipt = () => {
 
     return (
         <div className="app-container">
+
             <nav className="app-navbar">
                 <div className="navbar-app-content">
                     <img src={signature} alt="SB Signature" className="navbar-signature" />
