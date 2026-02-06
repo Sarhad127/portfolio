@@ -192,6 +192,9 @@ function Home() {
                                     <h3 className="project-name">
                                         <img src={project.icon} alt="" className="project-icon" />
                                         {project.name}
+                                        {index === projects.length - 1 && (
+                                            <span className="latest-badge">Latest</span>
+                                        )}
                                     </h3>
                                     <Link to={project.link}>
                                         <div
