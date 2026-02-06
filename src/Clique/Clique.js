@@ -64,7 +64,7 @@ const Clique = () => {
             src: signup,
             alt: 'Sign Up',
             caption: 'Registration Page',
-            description: 'Users can sign up using their email (which serves as the unique identifier), username, and double password input for added security.'
+            description: 'Users can sign up using their email, username, and double password input.'
         },
         {
             src: chat,
@@ -76,7 +76,7 @@ const Clique = () => {
             src: groupChat,
             alt: 'Group Chat',
             caption: 'Group Chat Page',
-            description: 'Group chats are displayed in the second container with user avatars, group titles, and last message previews. The chat box shows messages with usernames, avatars, and timestamps. The right panel displays group information including title, members, and options to invite friends, change the group background, or leave the group. If a member isn\'t already a friend, an "Add Friend" button appears.'
+            description: 'Group chats are displayed with user avatars, group titles, and last message previews. The right panel displays group information including title, members, and options to invite friends, or leave the group. If a member isn\'t already a friend, an "Add Friend" button appears.'
         },
         {
             src: background,
@@ -116,7 +116,7 @@ const Clique = () => {
             <section className="project-description">
                 <h2>Clique</h2>
                 <p>
-                    Clique is a full-featured chat app using WebSockets for real-time messaging. Users can sign up, log in, add friends, and start one-on-one or group conversations with instant updates.
+                    A completed chat application built to learn WebSockets and secure real-time communication between multiple users.
                 </p>
                 <ul>
                     <li><strong>Frontend:</strong> React</li>
