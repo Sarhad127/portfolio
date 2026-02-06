@@ -183,7 +183,7 @@ function Home() {
                 <div className="projects-wrapper">
                     <h2 className="section-title-project">Projects</h2>
                     <p className="projects-note">
-                        Personal projects developed to practice and refine my technical skills.
+                        Personal projects developed for practice.
                     </p>
                     <div className="projects-grid">
                         {projects.map((project, index) => (
