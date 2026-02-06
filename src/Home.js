@@ -86,21 +86,21 @@ function Home() {
             image: dashboardImage,
             link: "/pluto",
             icon: PlutoIcon,
-            description: "Task manager with authentication and multiple features."
+            description: "Task manager with multiple features."
         },
         {
             name: "Clique",
             image: Clique,
             link: "/Clique",
             icon: CliqueIcon,
-            description: "Chat application inspired by Discord using WebSockets."
+            description: "Chat application inspired by Discord."
         },
         {
             name: "Huskvitton",
             image: Receipt,
             link: "/Receipt",
             icon: ReceiptIcon,
-            description: "A receipt scanning system using Python as a microservice."
+            description: "Receipt scanning system using Python."
         }
     ];
 
@@ -229,10 +229,7 @@ function Home() {
 
                     <div className="about-content animate-on-load">
                         <p>
-                            I am a fullstack software developer with experience in building reliable backend systems and intuitive frontends.
-                            I work primarily with Java, Spring Boot, and MySQL for backend development, and React, JavaScript, and TypeScript
-                            for creating dynamic user interfaces. I enjoy developing fullstack applications, integrating tools like Docker,
-                            Git, and GitHub, and continuously learning new technologies to create clean, efficient, and maintainable solutions.
+                            I’m a full-stack developer who enjoys building solid backend systems and clean, easy-to-use frontends. I mostly work with Java, Spring Boot, and MySQL on the backend, and React with JavaScript and TypeScript on the frontend. I like working across the whole stack, using tools like Docker and Git, and I’m always learning new things to build solutions that are simple, reliable, and easy to maintain.
                         </p>
                     </div>
                 </div>
