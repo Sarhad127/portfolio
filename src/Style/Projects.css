@@ -121,6 +121,12 @@
     margin-left: 8px;
 }
 
+.project-disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    filter: grayscale(100%);
+}
+
 @media (max-width: 768px) {
     .section.projects-section {
         padding: 60px 0;
