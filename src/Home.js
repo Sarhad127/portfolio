@@ -17,11 +17,13 @@ import {FaAddressBook, FaCode, FaJava, FaReact, FaUser} from "react-icons/fa6";
 import dashboardImage from './images/Pluto/dashboard.png';
 import Clique from './images/Clique/groupchat.png';
 import Receipt from './images/Receipt/kvitto-scan-2.png'
+import Library from './images/Library/library.png'
 import {Link} from "react-router-dom";
 import emailjs from '@emailjs/browser';
 import PlutoIcon from './icons/pluto-icon.png';
 import CliqueIcon from './icons/Clique-icon-2.png';
 import ReceiptIcon from './icons/receipt-icon.png';
+import LibraryIcon from './icons/books-icon.png';
 import './Style/Projects.css'
 import './Style/Skills.css'
 import './Style/Navbar.css'
@@ -86,21 +88,32 @@ function Home() {
             image: dashboardImage,
             link: "/pluto",
             icon: PlutoIcon,
-            description: "Task manager with multiple features."
+            description: "Task manager with multiple features.",
+            enabled: true
         },
         {
             name: "Clique",
             image: Clique,
             link: "/Clique",
             icon: CliqueIcon,
-            description: "Chat application inspired by Discord."
+            description: "Chat application inspired by Discord.",
+            enabled: true
         },
         {
             name: "Huskvitton",
             image: Receipt,
             link: "/Receipt",
             icon: ReceiptIcon,
-            description: "Receipt scanning system using Python."
+            description: "Receipt scanning system using Python.",
+            enabled: true
+        },
+        {
+            name: "Library {In Progress}",
+            image: Library,
+            link: "/library",
+            icon: LibraryIcon,
+            description: "A library management system.",
+            enabled: false
         }
     ];
 
@@ -196,12 +209,19 @@ function Home() {
                                             <span className="latest-badge">Latest</span>
                                         )}
                                     </h3>
-                                    <Link to={project.link}>
+                                    {project.enabled ? (
+                                        <Link to={project.link}>
+                                            <div
+                                                className="project-image"
+                                                style={{ backgroundImage: `url(${project.image})` }}
+                                            />
+                                        </Link>
+                                    ) : (
                                         <div
-                                            className="project-image"
+                                            className="project-image project-disabled"
                                             style={{ backgroundImage: `url(${project.image})` }}
                                         />
-                                    </Link>
+                                    )}
                                     <p className="project-description-home">
                                         {project.description}
                                     </p>
