@@ -91,11 +91,11 @@ const Pluto = () => {
 
 
             <section className="repo-links">
-                <a href="https://github.com/Sarhad127/TODO-Frontend" target="_blank" rel="noopener noreferrer" className="repo-link">
+                <a href="https://github.com/Sarhad127/Libri-frontend" target="_blank" rel="noopener noreferrer" className="repo-link">
                     <FaGithub size={24} />
                     <span>Frontend Repo</span>
                 </a>
-                <a href="https://github.com/Sarhad127/email-verification" target="_blank" rel="noopener noreferrer" className="repo-link">
+                <a href="https://github.com/Sarhad127/Libri-backend" target="_blank" rel="noopener noreferrer" className="repo-link">
                     <FaGithub size={24} />
                     <span>Backend Repo</span>
                 </a>
