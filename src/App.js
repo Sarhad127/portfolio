@@ -3,6 +3,7 @@ import Home from './Home';
 import Pluto from "./Pluto/Pluto";
 import Clique from "./Clique/Clique";
 import Receipt from "./Receipt/Receipt";
+import Libri from "./Libri/Libri";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route path="/pluto" element={<Pluto />} />
           <Route path="/Clique" element={<Clique />} />
           <Route path="/Receipt" element={<Receipt/>} />
+          <Route path="/Libri" element={<Libri/>} />
         </Routes>
       </Router>
   );
