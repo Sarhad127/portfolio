@@ -17,7 +17,7 @@ import {FaAddressBook, FaCode, FaJava, FaReact, FaUser} from "react-icons/fa6";
 import dashboardImage from './images/Pluto/dashboard.png';
 import Clique from './images/Clique/groupchat.png';
 import Receipt from './images/Receipt/kvitto-scan-2.png'
-import Library from './images/Library/library.png'
+import Library from './images/Libri/booklist.png'
 import {Link} from "react-router-dom";
 import emailjs from '@emailjs/browser';
 import PlutoIcon from './icons/pluto-icon.png';
@@ -110,10 +110,10 @@ function Home() {
         {
             name: "Library {In Progress}",
             image: Library,
-            link: "/library",
+            link: "/Libri",
             icon: LibraryIcon,
             description: "A library management system.",
-            enabled: false
+            enabled: true
         }
     ];
 
