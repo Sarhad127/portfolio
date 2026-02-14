@@ -108,11 +108,11 @@ function Home() {
             enabled: true
         },
         {
-            name: "Library {In Progress}",
+            name: "Libri",
             image: Library,
             link: "/Libri",
             icon: LibraryIcon,
-            description: "A library management system.",
+            description: "Role-based book e-commerce system.",
             enabled: true
         }
     ];
