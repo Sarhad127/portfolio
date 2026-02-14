@@ -5,8 +5,13 @@ import {useNavigate} from "react-router-dom";
 import signature from "../images/signature.png";
 
 import bookList from '../images/Libri/booklist.png';
-import bookDetail from '../images/Libri/bookdetail.png';
+import bookDetail from '../images/Libri/bookdetails.png';
 import bookCart from '../images/Libri/bookcart.png';
+import orderSummary from '../images/Libri/ordersummary.png';
+import userInfo from '../images/Libri/userinfo.png';
+import orderHistory from '../images/Libri/orderhistory.png';
+import Favorites from '../images/Libri/favorites.png';
+import adminPanel from '../images/Libri/adminpanel.png';
 
 const Pluto = () => {
     const navigate = useNavigate();
@@ -48,19 +53,49 @@ const Pluto = () => {
             src: bookList,
             alt: 'Book list',
             caption: 'Books',
-            description: 'A book management list page where users can browse all available books. Each book displays its title, author, category, format, language, and stock. Users can view details, add books to their cart or favorites, and see updated information in real time.'
+            description: 'Displays a list of books with images, basic info, and options to favorite or add to cart.'
         },
         {
             src: bookDetail,
             alt: 'Book details',
             caption: 'Book details',
-            description: 'A detailed book page showing the title, author, description, price, format, language, category, and stock. Users can add the book to their cart or favorites and view related information such as series or publisher.'
+            description: 'Shows detailed information about a book, including metadata, price, description, reviews, and favorite/add-to-cart options.'
         },
         {
             src: bookCart,
             alt: 'Book cart',
             caption: 'Cart',
-            description: 'The book cart page displays all selected books with their title, author, quantity, price, and image. Users can update quantities, remove items, and see the total price. The cart also supports real-time updates and provides a seamless checkout experience.'
+            description: 'Displays the shopping cart with items, quantities, prices, and allows updates or removal before checkout.'
+        },
+        {
+            src: orderSummary,
+            alt: 'Order summary',
+            caption: 'Orders summary',
+            description: 'Shows a summary of a completed order, including items, user info, shipping, and total cost.'
+        },
+        {
+            src: userInfo,
+            alt: 'User information',
+            caption: 'User information',
+            description: 'Displays a user’s personal information, including name, email, phone, address, and registration date.'
+        },
+        {
+            src: orderHistory,
+            alt: 'Order history',
+            caption: 'Order history',
+            description: 'Displays a user’s past orders, including order details, items purchased, quantities, prices, and status.'
+        },
+        {
+            src: Favorites,
+            alt: 'Favorites',
+            caption: 'Favorites',
+            description: 'Users can view their favorite books in a personal list.'
+        },
+        {
+            src: adminPanel,
+            alt: 'Admin panel',
+            caption: 'Admin panel',
+            description: 'Provides an admin panel to manage users, toggle user activity, and import books into the system.'
         },
     ];
 
@@ -81,7 +116,7 @@ const Pluto = () => {
 
             <section className="project-description">
                 <h2>Libri</h2>
-                <p>Libri is a book management project focused on multiple features, with well-built components and robust backend support.</p>
+                <p>Libri is a role-based book management system where admins manage users and books, and users can browse, buy, and favorite books with access to their order history.</p>
                 <ul>
                     <li><strong>Frontend:</strong> React</li>
                     <li><strong>Backend:</strong> Spring Boot</li>
